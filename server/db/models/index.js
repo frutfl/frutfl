@@ -1,5 +1,9 @@
-const User = require('./user');
+const Address = require('./address');
+const Category = require('./category');
+const Order = require('./order');
 const Product = require('./product');
+
+const User = require('./user');
 
 /**
  * If we had any associations to make, this would be a great place to put them!
@@ -16,5 +20,10 @@ const Product = require('./product');
  */
 
 module.exports = {
-  User
+  Address,
+  Category,
+  Order,
+  Product,
+
+  User,
 };
