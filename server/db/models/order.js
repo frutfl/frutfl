@@ -1,5 +1,5 @@
-const Sequelize = require('sequelize')
-const db = require('../db')
+const Sequelize = require('sequelize');
+const db = require('../db');
 
 const Order = db.define('order', {
     quantity: {
@@ -8,17 +8,15 @@ const Order = db.define('order', {
     },
     price: {
         type: Sequelize.FLOAT,
+        allowNull: false,
         validate: {
-            allowNull: false,
             min: 0.01
         }
     },
     status: {
         type: Sequelize.STRING,
-        validate: {
-            allowNull: false
-        }
+        allowNull: false
     }
-})
+});
 
-module.exports = Order
+module.exports = Order;
