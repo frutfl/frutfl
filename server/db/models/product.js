@@ -2,9 +2,16 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const Product = db.define('product', {
-  name: {
+  species: {
     type: Sequelize.STRING,
-    allowNull: false
+    allowNull: false,
+  },
+  variety: {
+    type: Sequelize.STRING,
+  },
+  organic: {
+    type: Sequelize.BOOLEAN,
+    defaultValue: false,
   },
   description: {
     type: Sequelize.TEXT
@@ -17,7 +24,7 @@ const Product = db.define('product', {
     type: Sequelize.INTEGER,
     allowNull: false
   },
-  volume: {
+  unit: {
     type: Sequelize.STRING,
     allowNull: false
   },
@@ -27,6 +34,12 @@ const Product = db.define('product', {
   },
   photos: {
     type: Sequelize.ARRAY(Sequelize.STRING)
+  },
+  name: {
+    type: Sequelize.VIRTUAL,
+    get () {
+      return (this.getDataValue('organic') ? this.getDataValue('organic') + 'Organic ' : '') + (this.getDataValue('variety') ? this.getDataValue('variety') + ' ' : '') + this.getDataValue('species');
+    }
   }
 });
 
