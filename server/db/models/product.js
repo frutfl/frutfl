@@ -33,7 +33,7 @@ const Product = db.define('product', {
     allowNull: false
   },
   photos: {
-    type: Sequelize.ARRAY(Sequelize.STRING)
+    type: Sequelize.ARRAY(Sequelize.STRING) /* eslint-disable-line new-cap */
   },
   name: {
     type: Sequelize.VIRTUAL,

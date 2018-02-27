@@ -23,6 +23,6 @@ const Address = db.define('address', {
     allowNull: false,
     defaultValue: true
   }
-})
+});
 
 module.exports = Address;
