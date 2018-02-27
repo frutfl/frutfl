@@ -20,7 +20,8 @@ const Address = db.define('address', {
   },
   isActive: {
     type: Sequelize.BOOLEAN,
-    allowNull: false
+    allowNull: false,
+    defaultValue: true
   }
 })
 
