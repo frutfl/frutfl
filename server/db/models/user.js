@@ -6,7 +6,14 @@ const User = db.define('user', {
   email: {
     type: Sequelize.STRING,
     unique: true,
+    allowNull: false,
+  },
+  accountType: {
+    type: Sequelize.STRING,
     allowNull: false
+  },
+  shouldResetPassword: {
+    type: Sequelize.BOOLEAN,
   },
   password: {
     type: Sequelize.STRING,
@@ -25,7 +32,7 @@ const User = db.define('user', {
     }
   },
   googleId: {
-    type: Sequelize.STRING
+    type: Sequelize.STRING,
   }
 })
 
