@@ -1,7 +1,8 @@
-import React from 'React';
+import React from 'react';
 /* import ReactDOM from 'ReactDOM';*/
 /* import { connect } from 'react-redux'*/
 import axios from 'axios';
+/* import Products from './products.jsx'*/
 
 export default class Home extends React.Component {
     constructor(props){
@@ -21,7 +22,7 @@ export default class Home extends React.Component {
         return(
             <div>
                 <h1>
-                    hello {this.state.products.length}
+                    hello THERE {this.state.products.length}
                 </h1>
             </div>
         );
