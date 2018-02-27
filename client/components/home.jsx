@@ -2,7 +2,7 @@ import React from 'react';
 /* import ReactDOM from 'ReactDOM';*/
 /* import { connect } from 'react-redux'*/
 import axios from 'axios';
-/* import Products from './products.jsx'*/
+import Products from './products.jsx'
 
 export default class Home extends React.Component {
     constructor(props){
@@ -15,14 +15,21 @@ export default class Home extends React.Component {
 
     componentDidMount(){
         axios.get('/api/products')
-        .then(products => this.setState({products}));
+             .then(products => {
+                 /* console.log(products);*/
+                 return products.data;
+             })
+             .then(productsData => this.setState({products: productsData}));
     }
 
     render() {
+        console.log(this.state)
+        const products = this.state.products;
+        console.log(products)
         return(
             <div>
                 <h1>
-                    hello THERE {this.state.products.length}
+                    <Products products={products} />
                 </h1>
             </div>
         );
