@@ -17,7 +17,7 @@
     "start": "node server",
     "start-dev": "NODE_ENV='development' npm run build-client-watch & npm run start-server",
     "start-server": "nodemon server -e html,js,scss --ignore public --ignore client",
-    "test": "NODE_ENV='test' mocha ./server/**/*.spec.js ./server/**/**/*.spec.js ./client/**/*.spec.js --compilers js:babel-register"
+    "test": "NODE_ENV='test' mocha ./server/**/*.spec.js ./server/**/**/*.spec.js ./client/**/*.spec.js --require mock-local-storage --compilers js:babel-register"
   },
   "author": "",
   "license": "ISC",
@@ -62,6 +62,7 @@
     "eslint-plugin-react": "^7.4.0",
     "husky": "^0.14.3",
     "mocha": "^3.3.0",
+    "mock-local-storage": "^1.0.5",
     "nodemon": "^1.12.1",
     "react-test-renderer": "^16.0.0",
     "redux-devtools-extension": "^2.13.2",
