@@ -27,13 +27,13 @@ const updateCartItemQuantity = (product, quantity) =>
  */
 export const readCartItemsFromStorage = () =>
   dispatch => {
-    const items = JSON.parse(localStorage.getItem('cart'));
+    const items = JSON.parse(localStorage.getItem('cart')) || [];
     dispatch(getCartItems(items));
   };
 
 export const writeCartItemToStorage = (product, quantity) =>
   dispatch => {
-    const items = JSON.parse(localStorage.getItem('cart'));
+    const items = JSON.parse(localStorage.getItem('cart')) || [];
     items.push({product, quantity});
     localStorage.setItem('cart', JSON.stringify(items));
     dispatch(addCartItem(product, quantity));
@@ -41,7 +41,7 @@ export const writeCartItemToStorage = (product, quantity) =>
 
 export const removeCartItemFromStorage = product =>
   dispatch => {
-    let items = JSON.parse(localStorage.getItem('cart'));
+    let items = JSON.parse(localStorage.getItem('cart')) || [];
     items = items.filter(item => item.product.id !== product.id);
     localStorage.setItem('cart', JSON.stringify(items));
     dispatch(removeCartItem(product));
@@ -49,7 +49,7 @@ export const removeCartItemFromStorage = product =>
 
 export const updateCartItemQuantityInStorage = (product, quantity) =>
   dispatch => {
-    let items = JSON.parse(localStorage.getItem('cart'));
+    let items = JSON.parse(localStorage.getItem('cart')) || [];
 
     items = items.map(item => {
       if (item.product.id === product.id) {
