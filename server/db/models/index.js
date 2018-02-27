@@ -9,7 +9,7 @@ const User = require('./user');
 Address.belongsTo(User);
 Address.hasMany(Order);
 
-Category.hasMany(Product, {through: 'ProductCategory'});
+Category.belongsToMany(Product, {through: 'ProductCategory'});
 
 Order.belongsTo(Address);
 Order.belongsTo(User);
@@ -17,7 +17,7 @@ Order.hasMany(OrderItem);
 
 OrderItem.belongsTo(Order);
 
-Product.hasMany(Category, {through: 'ProductCategory'});
+Product.belongsToMany(Category, {through: 'ProductCategory'});
 Product.hasMany(Review);
 
 Review.belongsTo(Product);
