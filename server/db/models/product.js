@@ -35,7 +35,7 @@ const Product = db.define('product', {
   },
   photos: {
       type: Sequelize.ARRAY(Sequelize.STRING), /* eslint-disable-line new-cap */
-      defaultValue: ['https://www.fillmurray.com/200/300']
+      defaultValue: ['/images/fill-murray.jpg']
   },
   name: {
     type: Sequelize.VIRTUAL,
