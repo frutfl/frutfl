@@ -2,14 +2,40 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {Login, Signup, UserHome} from './components';
-import {me} from './store';
+import {Login, Signup, UserHome, Cart} from './components';
+import {me, readCartItemsFromStorage} from './store';
 
 /**
  * COMPONENT
  */
+
+ /*
+function createFakeLocalStorageProducts() {
+  const cart = [
+    {
+      product: {
+        id: 1,
+        name: 'grape',
+        price: 0.89
+      },
+      quantity: 1
+    },
+    {
+      product: {
+        id: 2,
+        name: 'apple',
+        price: 1.27
+      },
+      quantity: 1
+    }
+  ];
+  localStorage.setItem('cart', JSON.stringify(cart));
+}
+*/
+
 class Routes extends Component {
   componentDidMount () {
+    // createFakeLocalStorageProducts();
     this.props.loadInitialData();
   }
 
@@ -21,6 +47,7 @@ class Routes extends Component {
         {/* Routes placed here are available to all visitors */}
         <Route path="/login" component={Login} />
         <Route path="/signup" component={Signup} />
+        <Route path="/cart" component={Cart} />
         {
           isLoggedIn &&
             <Switch>
@@ -50,6 +77,7 @@ const mapDispatch = (dispatch) => {
   return {
     loadInitialData () {
       dispatch(me());
+      dispatch(readCartItemsFromStorage());
     }
   };
 };
