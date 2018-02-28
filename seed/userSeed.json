@@ -1,0 +1,37 @@
+[
+  {
+    "firstName": "Cody",
+    "lastName": "FS",
+    "email": "cody@email.com",
+    "accountType": "user",
+    "password": 123
+  },
+  {
+    "firstName": "Murphy",
+    "lastName": "FS",
+    "email": "murphy@email.com",
+    "accountType": "user",
+    "password": 123
+  },
+  {
+    "firstName": "Matthew",
+    "lastName": "Gaba",
+    "email": "matthew@email.com",
+    "accountType": "admin",
+    "password": 456
+  },
+  {
+    "firstName": "Whit",
+    "lastName": "Johnson",
+    "email": "whit@email.com",
+    "accountType": "admin",
+    "password": 456
+  },
+  {
+    "firstName": "Rob",
+    "lastName": "Rinaldo",
+    "email": "rob@email.com",
+    "accountType": "admin",
+    "password": 456
+  }
+]
