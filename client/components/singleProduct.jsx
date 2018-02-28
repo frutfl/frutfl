@@ -18,6 +18,8 @@ export default class ProductPage extends React.Component {
     }
 
     render() {
+        const product = this.state.product;
+        console.log(product);
         return(
             <h1> this is an individual product's page </h1>
         );
