@@ -30,7 +30,8 @@ const Product = db.define('product', {
   },
   isCurrentlyAvailable: {
     type: Sequelize.BOOLEAN,
-    allowNull: false
+    allowNull: false,
+    defaultValue: true,
   },
   photos: {
     type: Sequelize.ARRAY(Sequelize.STRING) /* eslint-disable-line new-cap */
