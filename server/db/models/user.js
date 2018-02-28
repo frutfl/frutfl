@@ -3,11 +3,7 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const User = db.define('user', {
-  firstName: {
-    type: Sequelize.STRING,
-    allowNull: false,
-  },
-  lastName: {
+  name: {
     type: Sequelize.STRING,
     allowNull: false,
   },
@@ -43,12 +39,6 @@ const User = db.define('user', {
   googleId: {
     type: Sequelize.STRING,
   },
-  name: {
-    type: Sequelize.VIRTUAL,
-    get() {
-      return this.getDataValue('firstName') + ' ' + this.getDataValue('lastName');
-    }
-  }
 });
 
 module.exports = User;
