@@ -8,7 +8,6 @@ export default function Products(props) {
             {
                 props.products.map(product => {
                     const img = product.photos[0];
-                    console.log(img);
                     const key = product.id;
                     return <Product key={key} image={img} />;
                 })
