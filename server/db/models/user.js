@@ -3,17 +3,26 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const User = db.define('user', {
+  firstName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
+  lastName: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   email: {
     type: Sequelize.STRING,
     unique: true,
     allowNull: false,
   },
   accountType: {
-    type: Sequelize.STRING,
+    type: Sequelize.STRING, // guest, user, admin
     allowNull: false
   },
   shouldResetPassword: {
     type: Sequelize.BOOLEAN,
+    defaultValue: false,
   },
   password: {
     type: Sequelize.STRING,
@@ -27,12 +36,18 @@ const User = db.define('user', {
     type: Sequelize.STRING,
     // Making `.salt` act like a function hides it when serializing to JSON.
     // This is a hack to get around Sequelize's lack of a "private" option.
-    get () {
+    get() {
       return () => this.getDataValue('salt');
     }
   },
   googleId: {
     type: Sequelize.STRING,
+  },
+  name: {
+    type: Sequelize.VIRTUAL,
+    get() {
+      return this.getDataValue('firstName') + ' ' + this.getDataValue('lastName');
+    }
   }
 });
 
