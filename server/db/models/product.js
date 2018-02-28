@@ -40,7 +40,7 @@ const Product = db.define('product', {
   name: {
     type: Sequelize.VIRTUAL,
     get () {
-      return (this.getDataValue('organic') ? this.getDataValue('organic') + 'Organic ' : '') + (this.getDataValue('variety') ? this.getDataValue('variety') + ' ' : '') + this.getDataValue('species');
+      return (this.getDataValue('organic') ? 'Organic ' : '') + (this.getDataValue('variety') ? this.getDataValue('variety') + ' ' : '') + this.getDataValue('species');
     }
   }
 });
