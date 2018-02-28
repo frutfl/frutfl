@@ -2,6 +2,10 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 
 const Address = db.define('address', {
+  name: {
+    type: Sequelize.STRING,
+    allowNull: false,
+  },
   street: {
     type: Sequelize.STRING,
     allowNull: false
@@ -22,7 +26,7 @@ const Address = db.define('address', {
     type: Sequelize.BOOLEAN,
     allowNull: false,
     defaultValue: true
-  }
+  },
 });
 
 module.exports = Address;
