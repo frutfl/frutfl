@@ -30,22 +30,24 @@ async function seedProducts() {
   for (let i = 0; i < products.length; i++) {
     await Product.create(products[i])
       .then(newProduct => {
+        const categories = [];
         if (products[i].Category1) {
-          return Category.findOrCreate({
+          categories.push(Category.findOrCreate({
             where: { name: products[i].Category1 }
           })
             .then(([cat, _]) => {
               return cat.addProduct(newProduct);
-            });
+            }));
         }
         if (products[i].Category2) {
-          return Category.findOrCreate({
+          categories.push(Category.findOrCreate({
             where: { name: products[i].Category2 }
           })
             .then(([cat, _]) => {
               return cat.addProduct(newProduct);
-            });
+            }));
         }
+        return Promise.all(categories);
       });
     }
     console.log(`seeded ${products.length} products`);
