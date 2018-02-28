@@ -19,9 +19,16 @@ export default class ProductPage extends React.Component {
 
     render() {
         const product = this.state.product;
-        console.log(product);
+        const photo = (product.photos) ? product.photos[0] : '';
+        const price = product.price;
         return(
-            <h1> this is an individual product's page </h1>
+            <div>
+                <h1>{product.name}</h1>
+                <img src={photo} />
+                <br />
+                <span>{price} USD </span>
+                <span>{product.unit}</span>
+            </div>
         );
     }
 }
