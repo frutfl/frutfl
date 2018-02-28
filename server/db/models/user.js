@@ -60,6 +60,12 @@ User.encryptPassword = function (plainText, salt) {
     .digest('hex');
 };
 
+User.ACCOUNT_TYPES = {
+  GUEST: 'GUEST',
+  USER: 'USER',
+  ADMIN: 'ADMIN',
+ };
+
 /**
  * hooks
  */
