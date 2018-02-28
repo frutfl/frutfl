@@ -13,7 +13,7 @@ function renderAdditionalSignupFields() {
       <label htmlFor="userName"><small>Name</small></label>
       <input name="userName" type="text" />
     </div>
-  )
+  );
 }
 
 const AuthForm = (props) => {
@@ -97,7 +97,7 @@ export const Signup = connect(mapSignup, mapSignupDispatch)(AuthForm);
  * PROP TYPES
  */
 AuthForm.propTypes = {
-  name: PropTypes.string.isRequired,
+  formName: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.object

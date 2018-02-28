@@ -39,7 +39,7 @@ export const auth = (email, password, method, name = null) => {
         dispatch(getUser({ error: authError }));
       })
       .catch(dispatchOrHistoryErr => console.error(dispatchOrHistoryErr));
-}
+};
 
 export const logout = () =>
   dispatch =>
