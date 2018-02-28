@@ -1,0 +1,155 @@
+[
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Braeburn",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "per pound",
+    "price": 1.24
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Braeburn",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "3 lb bag",
+    "price": 2.5
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Braeburn",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "per pound",
+    "price": 2.2
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "2 lb bag",
+    "price": 2.5
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "3 lb bag",
+    "price": 3.16
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "5 lb bag",
+    "price": 5.95
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "per pound",
+    "price": 1.45
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "2 lb bag",
+    "price": 3.32
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "3 lb bag",
+    "price": 3.01
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Fuji",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "per pound",
+    "price": 2.23
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "2 lb bag",
+    "price": 2.45
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "3 lb bag",
+    "price": 2.86
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "5 lb bag",
+    "price": 5.2
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "FALSE",
+    "unit": "per pound",
+    "price": 1.39
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "2 lb bag",
+    "price": 3.28
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "3 lb bag",
+    "price": 3.04
+  },
+  {
+    "Category1": "Apples",
+    "Category2": "",
+    "variety": "Gala",
+    "species": "Apples",
+    "organic": "TRUE",
+    "unit": "per pound",
+    "price": 2.13
+  }
+]
