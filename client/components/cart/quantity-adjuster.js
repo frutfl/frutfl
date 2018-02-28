@@ -7,22 +7,22 @@ import {
 
 const QuantityAdjuster = ({
   item,
-  updateCartItemQuantityInStorage,
-  removeCartItemFromStorage
+  updateQuantity,
+  removeItem
 }) => {
 
-  function handleMinusClick(e) {
+  function handleMinusClick() {
     if (item.quantity > 1) { // Don't allow decreasing less than one
-      updateCartItemQuantityInStorage(item.product, item.quantity - 1);
+      updateQuantity(item.product, item.quantity - 1);
     }
   }
 
-  function handlePlusClick(e) {
-    updateCartItemQuantityInStorage(item.product, item.quantity + 1);
+  function handlePlusClick() {
+    updateQuantity(item.product, item.quantity + 1);
   }
 
-  function handleXClick(e) {
-    removeCartItemFromStorage(item.product);
+  function handleXClick() {
+    removeItem(item.product);
   }
 
   return (
@@ -32,8 +32,8 @@ const QuantityAdjuster = ({
       <button onClick={handlePlusClick}>+</button>
       <button onClick={handleXClick}>x</button>
     </span>
-  )
-}
+  );
+};
 
 
 /**
@@ -41,6 +41,9 @@ const QuantityAdjuster = ({
  */
 const mapState = null;
 
-const mapDispatch = {updateCartItemQuantityInStorage, removeCartItemFromStorage};
+const mapDispatch = {
+  updateQuantity: updateCartItemQuantityInStorage,
+  removeItem: removeCartItemFromStorage
+};
 
 export default connect(mapState, mapDispatch)(QuantityAdjuster);

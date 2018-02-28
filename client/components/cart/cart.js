@@ -10,8 +10,8 @@ const Cart = ({cartItems}) => {
         <table>
           <thead>
             <tr>
-              <th></th>
-              <th></th>
+              <th />
+              <th />
               <th>Quantity</th>
               <th>Price</th>
             </tr>
@@ -32,7 +32,7 @@ const Cart = ({cartItems}) => {
           <button>Proceed to checkout</button>
         </Link>
       </div>
-    )
+    );
   }
   return (
     <div>
@@ -43,8 +43,8 @@ const Cart = ({cartItems}) => {
         <h3>No items in shopping cart</h3>
       }
     </div>
-  )
-}
+  );
+};
 
 
 /**

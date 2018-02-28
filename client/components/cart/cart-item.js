@@ -1,5 +1,4 @@
 import React from 'react';
-import {connect} from 'react-redux';
 import QuantityAdjuster from './quantity-adjuster';
 
 const CartItem = ({item}) => (
@@ -9,6 +8,6 @@ const CartItem = ({item}) => (
           <td><QuantityAdjuster item={item} /></td>
           <td>${item.product.price * item.quantity}</td>
         </tr>
-)
+);
 
 export default CartItem;
