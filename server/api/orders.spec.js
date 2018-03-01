@@ -46,8 +46,8 @@ describe('Order routes', () => {
             status: Order.STATUSES.CREATED,
             userId: admin.id
           })
-            .then(order => { order2 = order; })
-        })
+            .then(order => { order2 = order; });
+        });
       })
       .then(() => {
         return Product.create({
