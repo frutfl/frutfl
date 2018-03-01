@@ -26,6 +26,6 @@ Order.STATUSES = {
     PROCESSING: 'PROCESSING',
     CANCELLED: 'CANCELLED',
     COMPLETED: 'COMPLETED'
-}
+};
 
 module.exports = Order;
