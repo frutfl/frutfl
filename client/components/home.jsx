@@ -1,10 +1,11 @@
 import React from 'react';
 /* import ReactDOM from 'ReactDOM';*/
 /* import { connect } from 'react-redux'*/
-import axios from 'axios';
 import Products from './products.jsx';
+import {connect} from 'react-redux';
+import {fetchAllProducts} from '../store';
 
-export default class Home extends React.Component {
+class Home extends React.Component {
     constructor(props){
         super(props);
         this.componentDidMount = this.componentDidMount.bind(this);
@@ -14,15 +15,11 @@ export default class Home extends React.Component {
     }
 
     componentDidMount(){
-        axios.get('/api/products')
-             .then(products => {
-                 return products.data;
-             })
-             .then(productsData => this.setState({products: productsData}));
+        this.props.onLoad();
     }
 
     render() {
-        const products = this.state.products;
+        const products = this.props.products;
         return(
             <div>
                 <Products products={products} />
@@ -31,3 +28,18 @@ export default class Home extends React.Component {
     }
 }
 
+const mapState = state => {
+    return {
+        products: state.products
+    };
+};
+
+const mapDispatch = dispatch => {
+    return {
+        onLoad() {
+            dispatch(fetchAllProducts());
+        }
+    };
+};
+
+export default connect(mapState, mapDispatch)(Home);
