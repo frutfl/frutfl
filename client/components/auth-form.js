@@ -6,12 +6,23 @@ import {auth} from '../store';
 /**
  * COMPONENT
  */
+
+function renderAdditionalSignupFields() {
+  return (
+    <div>
+      <label htmlFor="userName"><small>Name</small></label>
+      <input name="userName" type="text" />
+    </div>
+  );
+}
+
 const AuthForm = (props) => {
-  const {name, displayName, handleSubmit, error} = props;
+  const {formName, displayName, handleSubmit, error} = props;
 
   return (
     <div>
-      <form onSubmit={handleSubmit} name={name}>
+      <form onSubmit={handleSubmit} name={formName}>
+        { formName === 'signup' && renderAdditionalSignupFields() }
         <div>
           <label htmlFor="email"><small>Email</small></label>
           <input name="email" type="text" />
@@ -40,7 +51,7 @@ const AuthForm = (props) => {
  */
 const mapLogin = (state) => {
   return {
-    name: 'login',
+    formName: 'login',
     displayName: 'Login',
     error: state.user.error
   };
@@ -48,13 +59,13 @@ const mapLogin = (state) => {
 
 const mapSignup = (state) => {
   return {
-    name: 'signup',
+    formName: 'signup',
     displayName: 'Sign Up',
     error: state.user.error
   };
 };
 
-const mapDispatch = (dispatch) => {
+const mapLoginDispatch = (dispatch) => {
   return {
     handleSubmit (evt) {
       evt.preventDefault();
@@ -66,14 +77,27 @@ const mapDispatch = (dispatch) => {
   };
 };
 
-export const Login = connect(mapLogin, mapDispatch)(AuthForm);
-export const Signup = connect(mapSignup, mapDispatch)(AuthForm);
+const mapSignupDispatch = (dispatch) => {
+  return {
+    handleSubmit (evt) {
+      evt.preventDefault();
+      const formName = evt.target.name;
+      const email = evt.target.email.value;
+      const password = evt.target.password.value;
+      const userName = evt.target.userName.value;
+      dispatch(auth(email, password, formName, userName));
+    }
+  };
+};
+
+export const Login = connect(mapLogin, mapLoginDispatch)(AuthForm);
+export const Signup = connect(mapSignup, mapSignupDispatch)(AuthForm);
 
 /**
  * PROP TYPES
  */
 AuthForm.propTypes = {
-  name: PropTypes.string.isRequired,
+  formName: PropTypes.string.isRequired,
   displayName: PropTypes.string.isRequired,
   handleSubmit: PropTypes.func.isRequired,
   error: PropTypes.object
