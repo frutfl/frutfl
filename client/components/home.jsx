@@ -6,14 +6,6 @@ import {connect} from 'react-redux';
 import {fetchAllProducts} from '../store';
 
 class Home extends React.Component {
-    constructor(props){
-        super(props);
-        this.componentDidMount = this.componentDidMount.bind(this);
-        this.state = {
-            products: []
-        };
-    }
-
     componentDidMount(){
         this.props.onLoad();
     }
