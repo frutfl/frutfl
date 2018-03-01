@@ -36,18 +36,18 @@ describe('Order routes', () => {
         .then(result => { admin = result; })
       ])
       .then(() => {
-        return Promise.all([
-          Order.create({
-            status: Order.STATUSES.CREATED,
-            userId: user.id
-          })
-          .then(order => { order1 = order; }),
-          Order.create({
+        return Order.create({
+          status: Order.STATUSES.CREATED,
+          userId: user.id
+        })
+        .then(order => { order1 = order; })
+        .then(() => {
+          return Order.create({
             status: Order.STATUSES.CREATED,
             userId: admin.id
           })
-          .then(order => { order2 = order; })
-        ]);
+            .then(order => { order2 = order; })
+        })
       })
       .then(() => {
         return Product.create({
@@ -103,12 +103,12 @@ describe('Order routes', () => {
         expect(res.body.length).to.equal(2);
 
         expect(res.body[0].orderItems).to.be.an('array');
-        expect(res.body[0].orderItems[0].price).to.equal(orderItem1.price);
+        expect(res.body[0].orderItems[0].price).to.equal(orderItem2.price);
         expect(res.body[0].orderItems[0].product.species)
           .to.equal(product.species);
 
         expect(res.body[1].orderItems).to.be.an('array');
-        expect(res.body[1].orderItems[0].price).to.equal(orderItem2.price);
+        expect(res.body[1].orderItems[0].price).to.equal(orderItem1.price);
         expect(res.body[1].orderItems[0].product.species)
           .to.equal(product.species);
       });
