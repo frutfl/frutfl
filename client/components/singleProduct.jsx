@@ -24,8 +24,9 @@ export default class ProductPage extends React.Component {
         return(
             <div>
                 <h1>{product.name}</h1>
-                <img src={photo} />
-                <br />
+                <div>
+                    <img src={photo} />
+                </div>
                 <span>{price} USD </span>
                 <span>{product.unit}</span>
             </div>
