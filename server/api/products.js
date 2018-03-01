@@ -7,3 +7,12 @@ router.get('/', (req, res, next) => {
         .then(products => res.json(products))
         .catch(next);
 });
+
+router.get('/:id', (req, res, next) => {
+    Product.findOne({
+        where: {
+            id: req.params.id
+        }})
+        .then(product => res.json(product))
+        .catch(next);
+});
