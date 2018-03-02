@@ -87,16 +87,16 @@ describe('thunk creators', () => {
   });
 });
 
-// describe('addresses reducer', () => {
+describe('addresses reducer', () => {
 
-//   const fakeAddresses = [
-//     { id: 1, name: 'name1', street: 'street1', city: 'city1', state: 'state1', country: 'country1', isActive: 'true', userId: 1 },
-//     { id: 2, name: 'name2', street: 'street2', city: 'city2', state: 'state2', country: 'country2', isActive: 'true', userId: 2 }
-//   ];
+  const fakeAddresses = [
+    { id: 1, name: 'name1', street: 'street1', city: 'city1', state: 'state1', country: 'country1', isActive: 'true', userId: 1 },
+    { id: 2, name: 'name2', street: 'street2', city: 'city2', state: 'state2', country: 'country2', isActive: 'true', userId: 2 }
+  ];
 
-//   describe('GET_ADDRESSES', () => {
-//     it('returns addresses', () => {
+  // describe('GET_ADDRESSES', () => {
+  //   it('returns addresses', () => {
 
-//     })
-//   })
-// })
+  //   })
+  // })
+})
