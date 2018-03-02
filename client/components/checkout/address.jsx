@@ -1,7 +1,11 @@
 import React from 'react';
 
+import addressList from './address-list';
+
 const address = props => (
-  null
+  <div>
+    <addressList />
+  </div>
 );
 
 export default address;

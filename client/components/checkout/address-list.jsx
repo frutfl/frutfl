@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { fetchAddresses } from '../store/addresses';
+
 //fetches addresses from database, maps over them and renders address containers, passing them one address each
 
 class addressList extends Component {
 
   componentDidMount() {
-    console.log(this);
-    //dispatch - fetch addresses (which will be passed back in as props)
+    this.props.fetchAddresses();
   }
 
   render() {
-    console.log(this);
     if (this.props.addresses) {
       return (
         <div>
@@ -27,5 +27,8 @@ class addressList extends Component {
 const mapState = state => ({
   addresses: state.addresses,
 });
+const mapDispatch = dispatch => ({
+  fetchAddresses: () => dispatch(fetchAddresses())
+});
 
-export default connect(mapState)(addressList);
+export default connect(mapState, mapDispatch)(addressList);

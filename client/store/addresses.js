@@ -51,19 +51,19 @@ export const fetchAddresses = () =>
       .then(res => dispatch(getAddresses(res.data)))
       .catch(err => console.log(err));
 
-export const postAddress = (userId, address) =>
+export const postAddress = address =>
   dispatch =>
-    axios.post('/api/addresses', { userId, address })
+    axios.post('/api/addresses', address)
       .then(res => dispatch(addAddress(res.data)))
       .catch(err => console.log(err));
 
-export const putAddress = (userId, address) =>
+export const putAddress = address =>
   dispatch =>
     axios.put(`/api/addresses/${address.id}`)
       .then(res => dispatch(editAddress(res.data)))
       .catch(err => console.log(err));
 
-export const deleteAddress = (userId, address) =>
+export const deleteAddress = address =>
   dispatch =>
     axios.delete(`/api/addresses/${address.id}`)
       .then(() => dispatch(removeAddress(address)))

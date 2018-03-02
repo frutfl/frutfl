@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
+import { putAddress } from '../store/addresses';
+
 //gets an address from props, renders either address info or editing form based on what user wants, passing through the address and passing in the toggleEditing function
 
 class addressContainer extends Component {
@@ -16,11 +18,14 @@ class addressContainer extends Component {
   }
 
   render() {
-    console.log(this);
     return (
-      this.state.editing ? <addressEntry address={this.props.address} stopEditing={this.toggleEditing} /> : <addressInfo address={this.props.address} edit={this.toggleEditing} />
+      this.state.editing ? <addressEntry address={this.props.address} submit={this.props.updateAddress} stopEditing={this.toggleEditing} /> : <addressInfo address={this.props.address} edit={this.toggleEditing} />
     );
   }
 }
 
-export default addressContainer;
+const mapDispatch = dispatch => ({
+  updateAddress: address => dispatch(putAddress(address))
+});
+
+export default connect(null, mapDispatch)(addressContainer);

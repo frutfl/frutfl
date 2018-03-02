@@ -19,9 +19,9 @@ class addressEntry extends Component {
   }
 
   handleSubmit(event) {
+    event.preventDefault();
+    this.props.submit();
     this.props.stopEditing();
-    //other stuff
-    //depends on whether creating new address or editing existing one
   }
 
   render() {
@@ -41,7 +41,7 @@ class addressEntry extends Component {
             </li>
           ))}
         </ul>
-        <button>Save</button>
+        <button onClick={this.handleSubmit}>Save</button>
         <button onClick={this.props.stopEditing}>Cancel</button>
       </div>
     );
