@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchOrders} from '../store';
+import {fetchOrders, writeOrderStatus} from '../store';
 import {DAYS, MONTHS} from '../utils/date';
 import OrderItem from './order-item';
 
@@ -12,6 +12,7 @@ class Orders extends Component {
     };
     this.handleOrderStatusFilterChange = this.handleOrderStatusFilterChange
       .bind(this);
+    this.handleOrderStatusEdit = this.handleOrderStatusEdit.bind(this);
   }
 
   componentDidMount() {
@@ -49,18 +50,33 @@ class Orders extends Component {
     this.setState({orderStatusFilter: event.target.value});
   }
 
-  renderOrderStatusFilter() {
+  handleOrderStatusEdit(order) {
+    return function (event) {
+      this.props.writeOrderStatus(order.id, event.target.value);
+    }.bind(this);
+  }
+
+  renderOrderStatusFilterDropdown(handleChange) {
     return (
-      <div>
-        Status:
-        <select onChange={this.handleOrderStatusFilterChange}>
+        <select onChange={handleChange}>
           <option value="ALL">All</option>
           <option value="CREATED">Created</option>
           <option value="PROCESSING">Processing</option>
           <option value="CANCELLED">Cancelled</option>
           <option value="COMPLETED">Completed</option>
         </select>
-      </div>
+    );
+  }
+
+  renderOrderStatusEditDropdown(handleChange, status) {
+    console.log(status);
+    return (
+        <select onChange={handleChange} value={status}>
+          <option value="CREATED">Created</option>
+          <option value="PROCESSING">Processing</option>
+          <option value="CANCELLED">Cancelled</option>
+          <option value="COMPLETED">Completed</option>
+        </select>
     );
   }
 
@@ -69,13 +85,20 @@ class Orders extends Component {
     return orders.filter(order => this.state.orderStatusFilter === order.status);
   }
 
+  renderNonAdminStatus(status) {
+    return status[0] + status.slice(1).toLowerCase();
+  }
+
   renderOrders(orders, user) {
     orders = this.filterOrders(orders);
     return (
       <div>
         {
           user.accountType === 'ADMIN'
-          ? this.renderOrderStatusFilter()
+          ? <div>
+            Status: { this.renderOrderStatusFilterDropdown(
+              this.handleOrderStatusFilterChange) }
+            </div>
           : null
         }
         { orders.map(order => {
@@ -92,7 +115,14 @@ class Orders extends Component {
                 Total: ${ this.computeTotalFromOrderItems(order.orderItems) }
               </div>
               <div>
-                Status: { order.status[0] + order.status.slice(1).toLowerCase() }
+                Status: {
+                  user.accountType === 'ADMIN'
+                  ? this.renderOrderStatusEditDropdown(
+                      this.handleOrderStatusEdit(order),
+                      order.status
+                    )
+                  : this.renderNonAdminStatus(order.status)
+                }
               </div>
             </div>
           );
@@ -127,6 +157,6 @@ const mapState = state => {
   };
 };
 
-const mapDispatch = { fetchOrders };
+const mapDispatch = { fetchOrders, writeOrderStatus };
 
 export default connect(mapState, mapDispatch)(Orders);
