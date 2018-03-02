@@ -5,6 +5,14 @@ import {DAYS, MONTHS} from '../utils/date';
 import OrderItem from './order-item';
 
 class Orders extends Component {
+  constructor() {
+    super();
+    this.state = {
+      orderStatusFilter: 'ALL'
+    };
+    this.handleOrderStatusFilterChange = this.handleOrderStatusFilterChange
+      .bind(this);
+  }
 
   componentDidMount() {
     this.props.fetchOrders();
@@ -37,9 +45,39 @@ class Orders extends Component {
     }, 0);
   }
 
-  renderOrders(orders) {
+  handleOrderStatusFilterChange(event) {
+    this.setState({orderStatusFilter: event.target.value});
+  }
+
+  renderOrderStatusFilter() {
     return (
       <div>
+        Status:
+        <select onChange={this.handleOrderStatusFilterChange}>
+          <option value="ALL">All</option>
+          <option value="CREATED">Created</option>
+          <option value="PROCESSING">Processing</option>
+          <option value="CANCELLED">Cancelled</option>
+          <option value="COMPLETED">Completed</option>
+        </select>
+      </div>
+    );
+  }
+
+  filterOrders(orders) {
+    if (this.state.orderStatusFilter === 'ALL') return orders;
+    return orders.filter(order => this.state.orderStatusFilter === order.status);
+  }
+
+  renderOrders(orders, user) {
+    orders = this.filterOrders(orders);
+    return (
+      <div>
+        {
+          user.accountType === 'ADMIN'
+          ? this.renderOrderStatusFilter()
+          : null
+        }
         { orders.map(order => {
           return (
             <div key={order.id}>
@@ -66,12 +104,13 @@ class Orders extends Component {
   render() {
     const orders = this.props.orders;
     const fetching = this.props.fetching;
+    const user = this.props.user;
     return (
       <div>
         <h1>Orders</h1>
         { fetching
           ? this.renderLoading()
-          : this.renderOrders(orders) }
+          : this.renderOrders(orders, user) }
       </div>
     );
   }
@@ -83,7 +122,8 @@ class Orders extends Component {
 const mapState = state => {
   return {
     orders: state.order.orders,
-    fetching: state.order.fetching
+    fetching: state.order.fetching,
+    user: state.user
   };
 };
 

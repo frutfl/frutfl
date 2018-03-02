@@ -79,6 +79,11 @@ async function seedOrders() {
     userId: 1,
     addressId: address.id
   });
+  let order3 = await Order.create({
+    status: Order.STATUSES.CREATED,
+    userId: 2,
+    addressId: address.id
+  })
   await OrderItem.create({
     quantity: 1,
     price: 0.89,
@@ -96,6 +101,12 @@ async function seedOrders() {
     price: 4.49,
     orderId: order2.id,
     productId: 1
+  });
+  await OrderItem.create({
+    quantity: 1,
+    price: 2.00,
+    orderId: order3.id,
+    productId: 3
   });
   console.log('seeded orders and order items');
 }
