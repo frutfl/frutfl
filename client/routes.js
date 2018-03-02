@@ -2,40 +2,15 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {Login, Signup, UserHome, Cart, Home, ProductPage} from './components';
+import {Login, Signup, UserHome, Cart, Home, ProductPage, Orders} from './components';
 import {me, readCartItemsFromStorage} from './store';
 
 /**
  * COMPONENT
  */
 
- /*
-function createFakeLocalStorageProducts() {
-  const cart = [
-    {
-      product: {
-        id: 1,
-        name: 'grape',
-        price: 0.89
-      },
-      quantity: 1
-    },
-    {
-      product: {
-        id: 2,
-        name: 'apple',
-        price: 1.27
-      },
-      quantity: 1
-    }
-  ];
-  localStorage.setItem('cart', JSON.stringify(cart));
-}
-*/
-
 class Routes extends Component {
   componentDidMount () {
-    // createFakeLocalStorageProducts();
     this.props.loadInitialData();
   }
 
@@ -50,6 +25,7 @@ class Routes extends Component {
         <Route path="/signup" component={Signup} />
         <Route path="/cart" component={Cart} />
         <Route path="/products/:id" component={ProductPage} />
+        <Route path="/orders" component={Orders} />
         {
           isLoggedIn &&
             <Switch>

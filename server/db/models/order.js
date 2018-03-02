@@ -2,6 +2,7 @@ const Sequelize = require('sequelize');
 const db = require('../db');
 const OrderItem = require('./orderItem');
 const Product = require('./product');
+const Address = require('./address');
 
 const Order = db.define('order', {
     status: {
@@ -15,6 +16,9 @@ const Order = db.define('order', {
                 {
                     model: OrderItem,
                     include: [Product]
+                },
+                {
+                    model: Address
                 }
             ]
         }
