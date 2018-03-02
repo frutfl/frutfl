@@ -4,6 +4,7 @@ import React from 'react';
 import Products from './products.jsx';
 import {connect} from 'react-redux';
 import {fetchAllProducts} from '../store';
+import Categories from './categories.jsx';
 
 class Home extends React.Component {
     componentDidMount(){
@@ -14,6 +15,7 @@ class Home extends React.Component {
         const products = this.props.products;
         return(
             <div>
+                <Categories />
                 <Products products={products} />
             </div>
         );
