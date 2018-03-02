@@ -16,7 +16,7 @@ const AddressInfo = props => {
           <li key={attr.dbCol}>{props.address[attr.dbCol]}</li>
         ))}
       </ul>
-      <button onClick={props.selectAddress}>select</button>
+      <button onClick={() => props.selectAddress(props.address.id)}>select</button>
       <button onClick={props.edit}>edit</button>
     </div>
   );

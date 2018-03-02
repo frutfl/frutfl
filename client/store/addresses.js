@@ -59,7 +59,7 @@ export const postAddress = address =>
 
 export const putAddress = address =>
   dispatch =>
-    axios.put(`/api/addresses/${address.id}`)
+    axios.put(`/api/addresses/${address.id}`, address)
       .then(res => dispatch(editAddress(res.data)))
       .catch(err => console.log(err));
 

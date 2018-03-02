@@ -9,7 +9,7 @@ class AddressEntry extends Component {
 
   constructor(props) {
     super(props);
-    this.state = this.props.address;
+    this.state = this.props.address || {};
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
@@ -20,7 +20,8 @@ class AddressEntry extends Component {
 
   handleSubmit(event) {
     event.preventDefault();
-    this.props.submit();
+    console.log('sending to thunk', this.state);
+    this.props.submit(this.state);
     this.props.stopEditing();
   }
 

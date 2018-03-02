@@ -17,24 +17,25 @@ router.get('/', (req, res, next) => {
 
 router.post('/', (req, res, next) => {
   Address.create(req.body)
-    .then(newAddress => res.setStatus(201).json(newAddress))
+    .then(newAddress => newAddress.setUser(req.user.id))
+    .then(newAddress => res.status(201).json(newAddress))
     .catch(next);
 });
 
 router.put('/:addressId', (req, res, next) => {
   Address.update(req.body, {
-    where: { id: req.addressId },
+    where: { id: +req.params.addressId },
     returning: true,
   })
     .then(([numUpdated, [updatedAddress]]) =>
-      (numUpdated ? res.setStatus(204).json(updatedAddress) : res.sendStatus(404))
+      (numUpdated ? res.status(204).json(updatedAddress) : res.sendStatus(404))
     )
     .catch(next);
 });
 
-router.delete('./:addressId', (req, res, next) => {
+router.delete('/:addressId', (req, res, next) => {
   Address.destroy({
-    where: { id: req.addressId }
+    where: { id: +req.params.addressId }
   })
     .then(numDeleted =>
       (numDeleted ? res.sendStatus(204) : res.sendStatus(404))
