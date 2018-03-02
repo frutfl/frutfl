@@ -52,10 +52,6 @@ describe('thunk creators', () => {
 });
 
 describe('orders reducer', () => {
-  const initialState = {
-    orders: [],
-    fetching: false
-  }
 
   describe('GET_ORDERS action', () => {
     it('returns appropriate value', () => {
@@ -69,8 +65,12 @@ describe('orders reducer', () => {
           id: 2
         }
       ];
+      const initialState = {
+        orders: [],
+        fetching: false
+      };
       const action = {type: 'GET_ORDERS', orders: fakeOrders};
-      const result = ordersReducer(initialState, action)
+      const result = ordersReducer(initialState, action);
       expect(result.orders).to.be.deep.equal(fakeOrders);
       expect(result.fetching).to.be.equal(false);
     });
@@ -91,7 +91,7 @@ describe('orders reducer', () => {
       const initialState = {
         orders: fakeOrders,
         fetching: false
-      }
+      };
       const action = {type: 'DESTROY_ORDERS'};
       const result = ordersReducer(initialState, action);
       expect(result.orders).to.be.deep.equal([]);
@@ -114,7 +114,7 @@ describe('orders reducer', () => {
       const initialState = {
         orders: fakeOrders,
         fetching: false
-      }
+      };
       const action = {type: 'FETCHING_ORDERS'};
       const result = ordersReducer(initialState, action);
       expect(result.orders).to.be.deep.equal(fakeOrders);
@@ -137,7 +137,7 @@ describe('orders reducer', () => {
       const initialState = {
         orders: fakeOrders,
         fetching: true
-      }
+      };
       const action = {type: 'FETCHED_ORDERS'};
       const result = ordersReducer(initialState, action);
       expect(result.orders).to.be.deep.equal(fakeOrders);

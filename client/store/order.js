@@ -14,7 +14,7 @@ const FETCHED_ORDERS = 'FETCHED_ORDERS';
 const defaultOrders = {
   orders: [],
   fetching: false
-}
+};
 
 /**
  * ACTION CREATORS
@@ -36,7 +36,7 @@ export const fetchOrders = () =>
         dispatch(fetchedOrders());
       })
       .catch(err => console.log(err));
-    }
+    };
 
 /**
  * REDUCER
@@ -54,12 +54,12 @@ export default function (state = defaultOrders, action) {
       return {
         orders: state.orders,
         fetching: true
-      }
+      };
     case FETCHED_ORDERS:
       return {
         orders: state.orders,
         fetching: false
-      }
+      };
     default:
       return state;
   }

@@ -10,6 +10,6 @@ const OrderItem = ({item}) => (
     <div>{ item.quantity }</div>
     <div>${ item.price * item.quantity }</div>
   </div>
-)
+);
 
 export default OrderItem;
