@@ -1,13 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
 
-import { setSelected } from '../store/addresses';
+import { setSelected } from '../../store/addresses';
 import { addressViewableAttributes as attributes } from './helpers';
 
 //gets address and editing toggle from props, gets address attributes from helpers, renders address attributes and edit button
 //also allows user to select address
 
-const addressInfo = props => {
+const AddressInfo = props => {
 
   return (
     <div>
@@ -26,4 +26,4 @@ const mapDispatch = (dispatch, OwnProps) => ({
   selectAddress: dispatch(setSelected(OwnProps.address.id)),
 });
 
-export default connect(null, mapDispatch)(addressInfo);
+export default connect(null, mapDispatch)(AddressInfo);

@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { fetchAddresses } from '../store/addresses';
+import { fetchAddresses } from '../../store/addresses';
+
+import AddressContainer from './address-container.jsx';
 
 //fetches addresses from database, maps over them and renders address containers, passing them one address each
 
-class addressList extends Component {
+class AddressList extends Component {
 
   componentDidMount() {
     this.props.fetchAddresses();
   }
 
   render() {
-    if (this.props.addresses) {
+    if (this.props.addressList) {
+      console.log('props addresses', this.props.addressList);
       return (
         <div>
-          {this.props.addresses.map(address => <addressContainer key={address.id} address={address} />)}
+          {this.props.addressList.map(address => <AddressContainer key={address.id} address={address} />)}
         </div>
       );
     } else {
@@ -25,10 +28,10 @@ class addressList extends Component {
 }
 
 const mapState = state => ({
-  addresses: state.addresses,
+  addressList: state.addresses.addressList,
 });
 const mapDispatch = dispatch => ({
   fetchAddresses: () => dispatch(fetchAddresses())
 });
 
-export default connect(mapState, mapDispatch)(addressList);
+export default connect(mapState, mapDispatch)(AddressList);

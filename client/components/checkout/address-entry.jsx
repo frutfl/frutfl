@@ -5,7 +5,7 @@ import { addressViewableAttributes as attributes } from './helpers';
 
 //gets address, editing toggle, and submit function from props, gets address attributes from helpers, renders form for editing or creating an address
 
-class addressEntry extends Component {
+class AddressEntry extends Component {
 
   constructor(props) {
     super(props);
@@ -48,4 +48,4 @@ class addressEntry extends Component {
   }
 }
 
-export default addressEntry;
+export default AddressEntry;
