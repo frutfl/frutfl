@@ -18,6 +18,10 @@ const Address = db.define('address', {
     type: Sequelize.STRING,
     allowNull: false
   },
+  zipCode: {
+    type: Sequelize.STRING,
+    allowNull: false
+  },
   country: {
     type: Sequelize.STRING,
     allowNull: false

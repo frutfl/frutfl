@@ -21,7 +21,7 @@ export default class ProductPage extends React.Component {
         const product = this.state.product;
         const photo = (product.photos) ? product.photos[0] : '';
         const price = product.price;
-        return(
+        return (
             <div>
                 <h1>{product.name}</h1>
                 <div>
