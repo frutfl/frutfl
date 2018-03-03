@@ -13,7 +13,3 @@ router.get('/', isAdmin, (req, res, next) => {
     .then(users => res.json(users))
     .catch(next);
 });
-
-router.delete('/', (req, res, next) => {
-
-});
