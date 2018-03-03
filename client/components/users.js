@@ -69,11 +69,9 @@ class Users extends Component {
           </tbody>
         </table>
       </div>
-    )
+    );
   }
 }
-
-
 
 /**
  * CONTAINER
