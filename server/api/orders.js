@@ -1,9 +1,10 @@
 const router = require('express').Router();
 const {Order, User} = require('../db/models');
+const {isLoggedIn, isAdmin} = require('../auth/middleware');
+
 module.exports = router;
 
-router.get('/', (req, res, next) => {
-  if (!req.user) return res.sendStatus(404);
+router.get('/', isLoggedIn, (req, res, next) => {
   if (req.user.accountType === User.ACCOUNT_TYPES.ADMIN) {
     Order.scope('defaultScope', 'orderItems').findAll({
       order: [
@@ -26,10 +27,7 @@ router.get('/', (req, res, next) => {
   }
 });
 
-router.put('/:orderId', (req, res, next) => {
-  if (!req.user || req.user.accountType !== User.ACCOUNT_TYPES.ADMIN) {
-    return res.sendStatus(404);
-  }
+router.put('/:orderId', isAdmin, (req, res, next) => {
   Order.update(
     { status: req.body.status },
     { where: { id: req.params.orderId }}
