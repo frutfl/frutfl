@@ -22,4 +22,4 @@ router.put('/:userId', isAdmin, (req, res, next) => {
   })
   .then(res.sendStatus(200))
   .catch(next);
-})
+});
