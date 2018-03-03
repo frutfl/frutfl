@@ -13,3 +13,13 @@ router.get('/', isAdmin, (req, res, next) => {
     .then(users => res.json(users))
     .catch(next);
 });
+
+router.put('/:userId', isAdmin, (req, res, next) => {
+  User.update(req.body, {
+    where: {
+      id: req.params.userId
+    }
+  })
+  .then(res.sendStatus(200))
+  .catch(next);
+})

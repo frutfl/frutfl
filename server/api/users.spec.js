@@ -14,7 +14,7 @@ describe('User routes', () => {
 
   describe('/api/users/', () => {
     const codysEmail = 'cody@puppybook.com';
-
+    let admin, user;
     beforeEach(() => {
       return User.create({
         name: 'Cody',
@@ -22,6 +22,7 @@ describe('User routes', () => {
         email: codysEmail,
         accountType: 'ADMIN',
       })
+      .then(created => { admin = created; })
       .then(() => {
         return User.create({
           name: 'Matt',
@@ -29,7 +30,8 @@ describe('User routes', () => {
           email: 'matt@gmail.com',
           accountType: 'USER',
         });
-      });
+      })
+      .then(created => { user = created; });
     });
 
     afterEach(() => {
@@ -65,6 +67,36 @@ describe('User routes', () => {
         .then(res => {
           expect(res.body).to.be.an('array');
           expect(res.body[0].email).to.be.equal(codysEmail);
+        });
+    });
+    it('PUT /api/users to change isActive makes so changed user can\'t access logged-in content',
+    () => {
+      let agentAdmin = request.agent(app);
+      return agent
+        .post('/auth/login')
+        .send({ email: user.email, password: '123' })
+        .expect(200)
+        .then(() => {
+          return agent
+            .get('/api/orders')
+            .expect(200);
+        })
+        .then(() => {
+          return agentAdmin
+            .post('/auth/login')
+            .send({ email: admin.email, password: '123' })
+            .expect(200);
+        })
+        .then(() => {
+          return agentAdmin
+            .put(`/api/users/${user.id}`)
+            .send({ isActive: false })
+            .expect(200);
+        })
+        .then(() => {
+          return agent
+            .get('/api/orders')
+            .expect(404);
         });
     });
   }); // end describe('/api/users')
