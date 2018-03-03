@@ -7,9 +7,8 @@ export default function Products(props) {
         <div>
             {
                 props.products.map(product => {
-                    const img = product.photos[0];
                     const key = product.id;
-                    return <Product key={key} image={img} />;
+                    return <Product key={key} product={product} />;
                 })
             }
         </div>
