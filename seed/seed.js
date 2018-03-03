@@ -83,7 +83,7 @@ async function seedOrders() {
     status: Order.STATUSES.CREATED,
     userId: 2,
     addressId: address.id
-  })
+  });
   await OrderItem.create({
     quantity: 1,
     price: 0.89,

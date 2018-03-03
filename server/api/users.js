@@ -16,4 +16,4 @@ router.get('/', isAdmin, (req, res, next) => {
 
 router.delete('/', (req, res, next) => {
 
-})
+});
