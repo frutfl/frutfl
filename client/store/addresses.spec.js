@@ -87,16 +87,84 @@ describe('thunk creators', () => {
   });
 });
 
-// describe('addresses reducer', () => {
+describe('addresses reducer', () => {
 
-//   const fakeAddresses = [
-//     { id: 1, name: 'name1', street: 'street1', city: 'city1', state: 'state1', country: 'country1', isActive: 'true', userId: 1 },
-//     { id: 2, name: 'name2', street: 'street2', city: 'city2', state: 'state2', country: 'country2', isActive: 'true', userId: 2 }
-//   ];
+  const initialState = {
+    addressList: [],
+    selectedId: null,
+  };
 
-//   describe('GET_ADDRESSES', () => {
-//     it('returns addresses', () => {
+  const fakeAddresses = [
+    { id: 1, name: 'name1', street: 'street1', city: 'city1', state: 'state1', country: 'country1', isActive: 'true', userId: 1 },
+    { id: 2, name: 'name2', street: 'street2', city: 'city2', state: 'state2', country: 'country2', isActive: 'true', userId: 2 }
+  ];
 
-//     })
-//   })
-// })
+  describe('GET_ADDRESSES', () => {
+    it('returns addresses', () => {
+      const action = { type: 'GET_ADDRESSES', addresses: fakeAddresses };
+      const result = addressesReducer(initialState, action);
+      expect(result.addressList).to.be.deep.equal(fakeAddresses);
+    });
+  });
+
+  describe('ADD_ADDRESS', () => {
+    it('adds address', () => {
+      const newAddress = { id: 3, name: 'name3', street: 'street3', city: 'city3', state: 'state3', country: 'country3', isActive: 'true', userId: 3 };
+      const action = { type: 'ADD_ADDRESS', address: newAddress };
+      const result = addressesReducer(initialState, action);
+      expect(result.addressList).to.be.deep.equal([newAddress]);
+      expect(result.addressList).to.not.equal([newAddress]);
+    });
+  });
+
+  describe('ADD_ADDRESS', () => {
+    it('adds address', () => {
+      const newAddress = { id: 3, name: 'name3', street: 'street3', city: 'city3', state: 'state3', country: 'country3', isActive: 'true', userId: 3 };
+      const action = { type: 'ADD_ADDRESS', address: newAddress };
+      const result = addressesReducer(initialState, action);
+      expect(result.addressList).to.be.deep.equal([newAddress]);
+      expect(result.addressList).to.not.equal([newAddress]);
+    });
+  });
+
+  describe('EDIT_ADDRESS', () => {
+    it('adds address', () => {
+      const newAddress = { id: 2, name: 'name3', street: 'street3', city: 'city3', state: 'state3', country: 'country3', isActive: 'true', userId: 3 };
+      const action = { type: 'EDIT_ADDRESS', address: newAddress };
+      const result = addressesReducer(
+        {
+        ...initialState,
+        addressList: fakeAddresses,
+        },
+        action
+      );
+      expect(result.addressList).to.be.deep.equal([fakeAddresses[0], newAddress]);
+      expect(result.addressList).to.not.equal(fakeAddresses);
+    });
+  });
+
+  describe('REMOVE_ADDRESS', () => {
+    it('adds address', () => {
+      const newAddress = { id: 2, name: 'name3', street: 'street3', city: 'city3', state: 'state3', country: 'country3', isActive: 'true', userId: 3 };
+      const action = { type: 'REMOVE_ADDRESS', address: newAddress };
+      const result = addressesReducer(
+        {
+        ...initialState,
+        addressList: fakeAddresses,
+        },
+        action
+      );
+      expect(result.addressList).to.be.deep.equal([fakeAddresses[0]]);
+      expect(result.addressList).to.not.equal(fakeAddresses);
+    });
+  });
+
+  describe('SET_SELECTED', () => {
+    it('sets selected address id', () => {
+      const action = { type: 'SET_SELECTED', addressId: 2 };
+      const result = addressesReducer(initialState, action);
+      expect(result.selectedId).to.equal(2);
+      expect(result).to.not.equal(initialState);
+    });
+  });
+});
