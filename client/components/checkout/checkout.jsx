@@ -3,13 +3,15 @@ import { connect } from 'react-redux';
 
 import AddressList from './address-list.jsx';
 import NewAddress from './new-address.jsx';
+import MyStoreCheckout from './MyStoreCheckout.jsx';
 
 const checkout = props => {
-
+  console.log('incoming props:', props);
   return (
     <div className="checkout">
       <AddressList />
       <NewAddress />
+      <MyStoreCheckout />
     </div>
   );
 };
