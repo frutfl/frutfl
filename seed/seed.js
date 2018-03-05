@@ -67,7 +67,8 @@ async function seedOrders() {
     city: 'Dallas',
     state: 'Texas',
     country: 'USA',
-    zipCode: '75243'
+    zipCode: '75243',
+    userId: 3,  // Hacky association, will revise
   });
   let order1 = await Order.create({
     status: Order.STATUSES.CREATED,
