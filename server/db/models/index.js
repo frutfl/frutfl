@@ -7,11 +7,12 @@ const Review  = require('./review');
 const User = require('./user');
 
 Address.belongsTo(User);
-Address.hasMany(Order);
+// Address.hasMany(Order);
 
 Category.belongsToMany(Product, {through: 'productCategory'});
 
-Order.belongsTo(Address);
+Order.belongsTo(Address, {as: 'shippingAddress'});
+Order.belongsTo(Address, {as: 'billingAddress'});
 Order.belongsTo(User);
 Order.hasMany(OrderItem);
 
