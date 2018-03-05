@@ -7,8 +7,9 @@ import users from './users';
 import cart from './cart';
 import order from './order';
 import products from './products';
-const reducer = combineReducers({user, users, cart, order, products});
+import addresses from './addresses';
 
+const reducer = combineReducers({user, users, cart, order, products, addresses});
 const middleware = composeWithDevTools(applyMiddleware(
   thunkMiddleware,
   createLogger({collapsed: true})
