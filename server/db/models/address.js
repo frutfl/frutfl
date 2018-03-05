@@ -30,16 +30,6 @@ const Address = db.define('address', {
     type: Sequelize.BOOLEAN,
     allowNull: false,
     defaultValue: true
-  },
-  isShipping: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false,
-    defaultValue: false,
-  },
-  isBilling: {
-    type: Sequelize.BOOLEAN,
-    allowNull: false,
-    defaultValue: false,
   }
 });
 

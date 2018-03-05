@@ -17,9 +17,9 @@ class Checkout extends Component {
   render() {
     return (
       <div className="checkout">
-        <AddressList addressList={this.props.addressList.filter(address => Boolean(address.isShipping))} selectAddress={this.props.selectShipping} selectedId={this.props.shippingId} />
+        <AddressList addressList={this.props.addressList} selectAddress={this.props.selectShipping} selectedId={this.props.shippingId} />
         <NewAddress addressType="SHIPPING" />
-        {this.props.shippingId ? <BillingAddressSection addressList={this.props.addressList.filter(address => Boolean(address.isBilling))} selectAddress={this.props.selectBilling} shippingId={this.props.shippingId} billingId={this.props.billingId} /> : <h2>Select a shipping address to continue to billing</h2>}
+        {this.props.shippingId ? <BillingAddressSection addressList={this.props.addressList} selectAddress={this.props.selectBilling} shippingId={this.props.shippingId} billingId={this.props.billingId} /> : <h2>Select a shipping address to continue to billing</h2>}
         {this.props.billingId ? <MyStoreCheckout /> : null}
       </div>
     );

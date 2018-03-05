@@ -39,8 +39,8 @@ class BillingAddressSection extends Component {
   }
 }
 
-const mapDispatch = (dispatch, OwnProps) => ({
-  setAsBillingAddress: () => dispatch(putAddress({ id: OwnProps.shippingId, isBilling: true })).then(() => dispatch(setShippingAsBilling()))
+const mapDispatch = dispatch => ({
+  setAsBillingAddress: () => dispatch(setShippingAsBilling())
 });
 
 export default connect(null, mapDispatch)(BillingAddressSection);

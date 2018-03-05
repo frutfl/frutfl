@@ -82,10 +82,6 @@ export const deleteAddress = address =>
       .then(() => dispatch(removeAddress(address)))
       .catch(err => console.log(err));
 
-// export const setSelectedAsBilling = () =>
-//   dispatch =>
-//     dispatch(selectBilling())
-
 /**
  * REDUCER
  */
