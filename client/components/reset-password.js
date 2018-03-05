@@ -2,13 +2,12 @@ import React from 'react';
 import {connect} from 'react-redux';
 import {updateSelfOnServer} from '../store';
 
-function handleSubmit(user, updateSelf, me) {
+function handleSubmit(user, updateSelf) {
   return function (evt) {
     evt.preventDefault();
     user.password = evt.target.password.value;
     user.shouldResetPassword = false;
-    updateSelf(user)
-    .then(() => me());
+    updateSelf(user);
   };
 }
 
