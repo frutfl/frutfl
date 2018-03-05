@@ -74,7 +74,7 @@ async function seedReviews() {
     title: 'Not great...',
     productId: 1,
     userId: 1
-  })
+  });
 }
 
 async function seedOrders() {
