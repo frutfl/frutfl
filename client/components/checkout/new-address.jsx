@@ -25,8 +25,8 @@ class NewAddress extends Component {
 }
 
 const mapDispatch = dispatch => ({
-  postSHIPPING: address => dispatch(postAddress({ ...address, isShipping: true })).then(newAddress => dispatch(selectShipping(newAddress.id))),
-  postBILLING: address => dispatch(postAddress({ ...address, isBilling: true })).then(newAddress => dispatch(selectBilling(newAddress.id)))
+  postSHIPPING: address => dispatch(postAddress(address)).then(newAddress => dispatch(selectShipping(newAddress.id))),
+  postBILLING: address => dispatch(postAddress(address)).then(newAddress => dispatch(selectBilling(newAddress.id)))
 });
 
 export default connect(null, mapDispatch)(NewAddress);
