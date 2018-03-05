@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Review from './review';
 
 export default class ProductPage extends React.Component {
     constructor(props){
@@ -29,6 +30,7 @@ export default class ProductPage extends React.Component {
                 </div>
                 <span>{price} USD </span>
                 <span>{product.unit}</span>
+                <Review product={product} />
             </div>
         );
     }
