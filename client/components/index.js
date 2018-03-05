@@ -10,5 +10,6 @@ export {default as Home} from './home.jsx';
 export {default as Cart} from './cart/cart';
 export {default as ProductPage} from './singleProduct.jsx';
 export {default as Orders} from './orders';
+export {default as ResetPassword} from './reset-password';
 export {default as Users} from './users';
 export {default as Checkout} from './checkout/checkout.jsx';
