@@ -6,7 +6,8 @@ const CartItem = ({item}) => (
           <td>Image</td>
           <td>{item.product.name}</td>
           <td><QuantityAdjuster item={item} /></td>
-          <td>${item.product.price * item.quantity}</td>
+          <td>${(item.product.price * item.quantity).toFixed(2)}</td>
+          <td>{item.product.unit}</td>
         </tr>
 );
 

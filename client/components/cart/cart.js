@@ -14,6 +14,7 @@ const Cart = ({cartItems}) => {
               <th />
               <th>Quantity</th>
               <th>Price</th>
+              <th />
             </tr>
           </thead>
           <tbody>
