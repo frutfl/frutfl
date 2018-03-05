@@ -9,7 +9,7 @@ function handleSubmit(user, updateSelf, me) {
     user.shouldResetPassword = false;
     updateSelf(user)
     .then(() => me());
-  }
+  };
 }
 
 const ResetPassword = (props) => {
@@ -28,7 +28,7 @@ const ResetPassword = (props) => {
       </form>
     </div>
   );
-}
+};
 
 /**
  * CONTAINER
