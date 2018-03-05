@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { postAddress } from '../../store/addresses';
+import { postAddress, selectShipping, selectBilling } from '../../store/addresses';
 
 import AddressEntry from './address-entry.jsx';
 
@@ -19,13 +19,14 @@ class NewAddress extends Component {
 
   render() {
     return (
-      this.state.editing ? <AddressEntry submit={this.props.postAddress} stopEditing={this.toggleEditing} /> : <button onClick={this.toggleEditing}>add address</button>
+      this.state.editing ? <AddressEntry submit={this.props[`post${this.props.addressType}`]} stopEditing={this.toggleEditing} /> : <button onClick={this.toggleEditing}>add address</button>
     );
   }
 }
 
 const mapDispatch = dispatch => ({
-  postAddress: address => dispatch(postAddress(address))
+  postSHIPPING: address => dispatch(postAddress(address)).then(newAddress => dispatch(selectShipping(newAddress.id))),
+  postBILLING: address => dispatch(postAddress(address)).then(newAddress => dispatch(selectBilling(newAddress.id)))
 });
 
 export default connect(null, mapDispatch)(NewAddress);

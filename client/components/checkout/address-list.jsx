@@ -1,37 +1,16 @@
-import React, { Component } from 'react';
-import { connect } from 'react-redux';
-
-import { fetchAddresses } from '../../store/addresses';
+import React from 'react';
 
 import AddressContainer from './address-container.jsx';
 
-//fetches addresses from database, maps over them and renders address containers, passing them one address each
+const AddressList = props => {
 
-class AddressList extends Component {
+    return (
+      <div>
+        {props.addressList.map(address =>
+          <AddressContainer key={address.id} address={address} selectAddress={props.selectAddress} selectedId={props.selectedId} />
+        )}
+      </div>
+    );
+};
 
-  componentDidMount() {
-    this.props.fetchAddresses();
-  }
-
-  render() {
-    if (this.props.addressList) {
-      console.log('props addresses', this.props.addressList);
-      return (
-        <div>
-          {this.props.addressList.map(address => <AddressContainer key={address.id} address={address} />)}
-        </div>
-      );
-    } else {
-      return null;
-    }
-  }
-}
-
-const mapState = state => ({
-  addressList: state.addresses.addressList,
-});
-const mapDispatch = dispatch => ({
-  fetchAddresses: () => dispatch(fetchAddresses())
-});
-
-export default connect(mapState, mapDispatch)(AddressList);
+export default AddressList;

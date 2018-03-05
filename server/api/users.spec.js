@@ -99,5 +99,30 @@ describe('User routes', () => {
             .expect(404);
         });
     });
+    it('PUT /api/user allows user to update themself', () => {
+      return agent
+        .post('/auth/login')
+        .send({ email: user.email, password: '123' })
+        .expect(200)
+        .then(() => {
+          return agent
+            .put(`/api/users/${user.id}`)
+            .send({ password: '456' })
+            .expect(200);
+        })
+        .then(() => {
+          return User.findById(user.id)
+          .then(updatedUser => {
+            expect(updatedUser.correctPassword('123')).to.be.equal(false);
+            expect(updatedUser.correctPassword('456')).to.be.equal(true);
+          });
+        })
+        .then(() => {
+          return agent
+            .put(`/api/users/${admin.id}`)
+            .send({ password: '456' })
+            .expect(404);
+        });
+    });
   }); // end describe('/api/users')
 }); // end describe('User routes')

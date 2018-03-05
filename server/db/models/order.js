@@ -18,7 +18,8 @@ const Order = db.define('order', {
                     include: [Product]
                 },
                 {
-                    model: Address
+                    model: Address,
+                    as: 'shippingAddress'
                 }
             ]
         }

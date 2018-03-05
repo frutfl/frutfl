@@ -41,7 +41,7 @@ export default function (state = defaultUsers, action){
  * THUNK CREATORS
  */
 export const fetchAllUsers = () => dispatch => {
-    axios.get('/api/users')
+    return axios.get('/api/users')
         .then(users => users.data)
         .then(usersData => {
             dispatch(getAllUsers(usersData));
@@ -50,7 +50,7 @@ export const fetchAllUsers = () => dispatch => {
 };
 
 export const updateUserOnServer = user => dispatch => {
-    axios.put(`/api/users/${user.id}`, user)
+    return axios.put(`/api/users/${user.id}`, user)
         .then(() => {
             dispatch(updateUser(user));
         })
