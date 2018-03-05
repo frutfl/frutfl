@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
 import {writeCartItemToStorage} from '../store';
+import {Link} from 'react-router-dom';
 
 class ProductPage extends React.Component {
     constructor(props){
@@ -36,7 +37,9 @@ class ProductPage extends React.Component {
                 </div>
                 <span>{price} USD </span>
                 <span> {product.unit} </span>
-                <button onClick={this.handleClick}>add to cart</button>
+                <Link to="/cart">
+                    <button onClick={this.handleClick}>add to cart</button>
+                </Link>
             </div>
         );
     }
