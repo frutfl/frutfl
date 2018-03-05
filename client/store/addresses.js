@@ -8,14 +8,17 @@ const GET_ADDRESSES = 'GET_ADDRESSES';
 const ADD_ADDRESS = 'ADD_ADDRESS';
 const EDIT_ADDRESS = 'EDIT_ADDRESS';
 const REMOVE_ADDRESS = 'REMOVE_ADDRESS';
-const SET_SELECTED = 'SET_SELECTED';
+const SELECT_SHIPPING = 'SELECT_SHIPPING';
+const SELECT_BILLING = 'SELECT_BILLING';
+const SET_SHIPPING_AS_BILLING = 'SET_SHIPPING_AS_BILLING';
 
 /**
  * INITIAL STATE
  */
 const defaultAddresses = {
   addressList: [],
-  selectedId: null,
+  shippingId: null,
+  billingId: null,
 };
 
 /**
@@ -37,9 +40,16 @@ const removeAddress = address => ({
   type: REMOVE_ADDRESS,
   address,
 });
-export const setSelected = addressId => ({
-  type: SET_SELECTED,
+export const selectShipping = addressId => ({
+  type: SELECT_SHIPPING,
   addressId,
+});
+export const selectBilling = addressId => ({
+  type: SELECT_BILLING,
+  addressId,
+});
+export const setShippingAsBilling = () => ({
+  type: SET_SHIPPING_AS_BILLING,
 });
 
 /**
@@ -54,7 +64,10 @@ export const fetchAddresses = () =>
 export const postAddress = address =>
   dispatch =>
     axios.post('/api/addresses', address)
-      .then(res => dispatch(addAddress(res.data)))
+      .then(res => {
+        dispatch(addAddress(res.data));
+        return res.data;
+      })
       .catch(err => console.log(err));
 
 export const putAddress = address =>
@@ -68,6 +81,10 @@ export const deleteAddress = address =>
     axios.delete(`/api/addresses/${address.id}`)
       .then(() => dispatch(removeAddress(address)))
       .catch(err => console.log(err));
+
+// export const setSelectedAsBilling = () =>
+//   dispatch =>
+//     dispatch(selectBilling())
 
 /**
  * REDUCER
@@ -98,10 +115,20 @@ export default function (state = defaultAddresses, action) {
         ...state,
         addressList: state.addressList.filter(address => address.id !== action.address.id),
       };
-    case SET_SELECTED:
+    case SELECT_SHIPPING:
       return {
         ...state,
-        selectedId: action.addressId,
+        shippingId: action.addressId,
+      };
+    case SELECT_BILLING:
+      return {
+        ...state,
+        billingId: action.addressId,
+      };
+    case SET_SHIPPING_AS_BILLING:
+      return {
+        ...state,
+        billingId: state.shippingId
       };
     default:
       return state;
