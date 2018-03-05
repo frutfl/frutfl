@@ -68,6 +68,8 @@ async function seedOrders() {
     state: 'Texas',
     country: 'USA',
     zipCode: '75243',
+    isShipping: true,
+    isBilling: false,
     userId: 3,  // Hacky association, will revise
   });
   let order1 = await Order.create({

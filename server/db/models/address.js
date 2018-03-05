@@ -31,6 +31,16 @@ const Address = db.define('address', {
     allowNull: false,
     defaultValue: true
   },
+  isShipping: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  },
+  isBilling: {
+    type: Sequelize.BOOLEAN,
+    allowNull: false,
+    defaultValue: false,
+  }
 });
 
 module.exports = Address;

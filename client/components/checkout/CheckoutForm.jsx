@@ -6,7 +6,7 @@ class CheckoutForm extends React.Component {
   handleSubmit = (event) => {
     // We don't want to let default form submission happen here, which would refresh the page.
     event.preventDefault();
-    console.log('address id:', this.props.addressId);
+    console.log('event data:', event);
     // Within the context of `Elements`, this call to createToken knows which Element to
     // tokenize, since there's only one in this group.
     this.props.stripe.createToken({name: 'Jenny Rosen'}).then(({token}) => {
@@ -21,7 +21,7 @@ class CheckoutForm extends React.Component {
     return (
       <form onSubmit={this.handleSubmit}>
         <label>
-        Card details
+        {this.props.children || null}
         <CardElement style={{base: {fontSize: '18px'}}} />
       </label>
         <button>Confirm order</button>
