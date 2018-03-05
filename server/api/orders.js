@@ -42,7 +42,7 @@ router.post('/', (req, res, next) => {
     shippingAddressId: req.body.shippingAddressId,
     billingAddressId: req.body.billingAddressId,
     stripeToken: req.body.token.id,
-    userId: req.user.id || null,
+    userId: req.user ? req.user.id : null,
   })
   .then(order => {
     return Promise.all(req.body.items.map(item => {
