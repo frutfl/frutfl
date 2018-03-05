@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import {withRouter, Route, Switch} from 'react-router-dom';
 import PropTypes from 'prop-types';
-import {Login, Signup, UserHome, Cart, Home, ProductPage, Orders, Users} from './components';
+import {Login, Signup, ResetPassword, UserHome, Cart, Home, ProductPage, Orders, Users} from './components';
 import {me, readCartItemsFromStorage} from './store';
 
 /**
@@ -14,9 +14,7 @@ class Routes extends Component {
     this.props.loadInitialData();
   }
 
-  render () {
-    const {isLoggedIn} = this.props;
-
+  renderMainApp (isLoggedIn) {
     return (
       <Switch>
         {/* Routes placed here are available to all visitors */}
@@ -39,6 +37,20 @@ class Routes extends Component {
       </Switch>
     );
   }
+
+  renderResetPassword() {
+    return <ResetPassword />;
+  }
+
+  render () {
+    const {isLoggedIn, user} = this.props;
+
+    return user.shouldResetPassword
+        ? this.renderResetPassword()
+        : this.renderMainApp(isLoggedIn);
+
+
+  }
 }
 
 /**
@@ -48,7 +60,8 @@ const mapState = (state) => {
   return {
     // Being 'logged in' for our purposes will be defined has having a state.user that has a truthy id.
     // Otherwise, state.user will be an empty object, and state.user.id will be falsey
-    isLoggedIn: !!state.user.id
+    isLoggedIn: !!state.user.id,
+    user: state.user
   };
 };
 

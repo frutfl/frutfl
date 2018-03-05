@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const {User} = require('../db/models');
-const {isAdmin} = require('../auth/middleware');
+const {isAdmin, isAdminOrSelf} = require('../auth/middleware');
 module.exports = router;
 
 router.get('/', isAdmin, (req, res, next) => {
@@ -17,12 +17,11 @@ router.get('/', isAdmin, (req, res, next) => {
     .catch(next);
 });
 
-router.put('/:userId', isAdmin, (req, res, next) => {
-  User.update(req.body, {
-    where: {
-      id: req.params.userId
-    }
+router.put('/:userId', isAdminOrSelf, (req, res, next) => {
+  User.findById(req.params.userId)
+  .then(user => {
+    return user.update(req.body);
   })
-  .then(res.sendStatus(200))
+  .then(user => res.json(user))
   .catch(next);
 });
