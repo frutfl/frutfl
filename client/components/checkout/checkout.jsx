@@ -27,7 +27,6 @@ class Checkout extends Component {
 }
 
 const mapState = state => ({
-  cart: state.cart,
   addressList: state.addresses.addressList,
   shippingId: state.addresses.shippingId,
   billingId: state.addresses.billingId,

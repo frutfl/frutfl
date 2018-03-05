@@ -32,7 +32,7 @@ class BillingAddressSection extends Component {
           <AddressList addressList={this.props.addressList.filter(address => address.id === this.props.shippingId)} selectAddress={this.props.selectAddress} selectedId={this.props.billingId} /> : null}
         {this.state.sameBillingasShipping === false ?
           (<div>
-            <AddressList addressList={this.props.addressList.filter(address => address.id !== this.props.shippingId)} selectAddress={this.props.selectAddress} selectedId={this.props.billingId} />
+            <AddressList addressList={this.props.addressList} selectAddress={this.props.selectAddress} selectedId={this.props.billingId} />
             <NewAddress addressType="BILLING" />
           </div>) : null}
       </div>
