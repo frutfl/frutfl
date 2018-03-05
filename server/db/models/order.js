@@ -7,7 +7,11 @@ const Address = require('./address');
 const Order = db.define('order', {
     status: {
         type: Sequelize.STRING,
-        allowNull: false
+        allowNull: false,
+        defaultValue: 'CREATED',
+    },
+    stripeToken: {
+        type: Sequelize.STRING,
     }
 }, {
     scopes: {

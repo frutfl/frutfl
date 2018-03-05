@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const {Order, User} = require('../db/models');
+const {Order, OrderItem, User, Product} = require('../db/models');
 const {isLoggedIn, isAdmin} = require('../auth/middleware');
 
 module.exports = router;
@@ -33,5 +33,33 @@ router.put('/:orderId', isAdmin, (req, res, next) => {
     { where: { id: req.params.orderId }}
   )
   .then(() => res.sendStatus(200))
+  .catch(next);
+});
+
+router.post('/', (req, res, next) => {
+  console.log('creating order...');
+  Order.create({
+    shippingAddressId: req.body.shippingAddressId,
+    billingAddressId: req.body.billingAddressId,
+    stripeToken: req.body.token.id,
+    userId: req.user ? req.user.id : null,
+  })
+  .then(order => {
+    return Promise.all(req.body.items.map(item => {
+      return Product.findById(item.id)
+      .then(product => {
+        return OrderItem.create({
+          quantity: item.quantity,
+          price: product.price,
+          orderId: order.id,
+          productId: product.id,
+        });
+      });
+    }));
+  })
+  .then((result) => {
+    //console.log('promise.all result:', result);
+    res.sendStatus(201);
+  })
   .catch(next);
 });
