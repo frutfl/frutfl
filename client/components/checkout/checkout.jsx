@@ -13,10 +13,10 @@ class Checkout extends Component {
   componentDidMount() {
     this.props.fetchAddresses();
   }
-// .filter(address => Boolean(address.isBilling))
   render() {
     return (
       <div className="checkout">
+        <h2>Shipping Address</h2>
         <AddressList addressList={this.props.addressList} selectAddress={this.props.selectShipping} selectedId={this.props.shippingId} />
         <NewAddress addressType="SHIPPING" />
         {this.props.shippingId ? <BillingAddressSection addressList={this.props.addressList} selectAddress={this.props.selectBilling} shippingId={this.props.shippingId} billingId={this.props.billingId} /> : <h2>Select a shipping address to continue to billing</h2>}

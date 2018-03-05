@@ -6,8 +6,6 @@ import { putAddress } from '../../store/addresses';
 import AddressInfo from './address-info.jsx';
 import AddressEntry from './address-entry.jsx';
 
-//gets an address from props, renders either address info or editing form based on what user wants, passing through the address and passing in the toggleEditing function
-
 class AddressContainer extends Component {
 
   constructor(props) {

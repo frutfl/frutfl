@@ -107,3 +107,7 @@ button:hover {
 .StripeElement.PaymentRequestButton {
   padding: 0;
 }
+
+.selected {
+  background-color: lightblue;
+}
