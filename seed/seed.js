@@ -2,7 +2,7 @@
 // Google Sheets converted to JSON using https://www.csvjson.com/csv2json
 
 const db = require('../server/db');
-const { User, Product, Category, Order, OrderItem, Address } = require('../server/db/models');
+const { User, Product, Category, Order, OrderItem, Address, Review } = require('../server/db/models');
 
 const products = require('./productSeed.json');
 const users = require('./userSeed.json');
@@ -58,6 +58,23 @@ async function seedUsers() {
     await User.create(users[i]);
   }
   console.log(`seeded ${users.length} users`);
+}
+
+async function seedReviews() {
+  await Review.create({
+    rating: 4,
+    content: 'This is a great apple',
+    title: 'The best apple',
+    productId: 1,
+    userId: 1
+  });
+  await Review.create({
+    rating: 2,
+    content: 'I didn\'t like this apple',
+    title: 'Not great...',
+    productId: 1,
+    userId: 1
+  });
 }
 
 async function seedOrders() {
@@ -119,7 +136,8 @@ db.sync({ force: true })
     console.log('seeding database...');
     return seedProducts()
       .then(() => seedUsers())
-      .then(() => seedOrders());
+      .then(() => seedOrders())
+      .then(() => seedReviews());
   })
   .catch(err => console.log(err))
   .finally(() => {
