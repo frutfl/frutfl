@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
-import updateCategory from '../store';
+import { updateCategory } from '../store';
 
 class Categories extends React.Component {
     constructor(props){
@@ -9,6 +9,7 @@ class Categories extends React.Component {
         this.state = {
             categories: []
         };
+        this.onClick = this.onClick.bind(this);
     }
 
     componentDidMount(){
@@ -17,15 +18,17 @@ class Categories extends React.Component {
         .then(categories => this.setState({categories}));
     }
 
+    onClick(evt, id){
+        this.props.handleChange(`${id}`);
+    }
+
     render(){
         const categories = this.state.categories;
         return (
             <div>
-                {
-                    categories.map(cat => (
-                        <h1 key={cat.id}>{ cat.name }</h1>
-                    ))
-                }
+                {categories.map(cat => (
+                    <button key={cat.id} onClick={(evt) => this.onClick(evt, cat.id)}>{ cat.name }</button>
+                ))}
             </div>
         );
     }
@@ -33,11 +36,9 @@ class Categories extends React.Component {
 
 const mapDispatch = dispatch => {
     return {
-        onClick(evt) {
-            dispatch(updateCategory(evt.target));
+        handleChange(id){
+            dispatch(updateCategory(id));
         }
     };
 };
-
-
 export default connect(null, mapDispatch)(Categories);
