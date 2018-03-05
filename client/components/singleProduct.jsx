@@ -1,5 +1,6 @@
 import React from 'react';
 import axios from 'axios';
+import Review from './review';
 import {connect} from 'react-redux';
 import {writeCartItemToStorage} from '../store';
 import {Link} from 'react-router-dom';
@@ -40,6 +41,7 @@ class ProductPage extends React.Component {
                 <Link to="/cart">
                     <button onClick={this.handleClick}>add to cart</button>
                 </Link>
+                <Review product={product} />
             </div>
         );
     }
