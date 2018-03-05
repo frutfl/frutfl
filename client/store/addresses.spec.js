@@ -1,4 +1,4 @@
-import {expect} from 'chai';
+import { expect } from 'chai';
 import addressesReducer, { fetchAddresses, postAddress, putAddress, deleteAddress } from './addresses';
 import axios from 'axios';
 import MockAdapter from 'axios-mock-adapter';
@@ -13,10 +13,9 @@ describe('thunk creators', () => {
   let mockAxios;
 
   const initialState = {
-    addresses: {
-      addressList: [],
-      selectedId: null,
-    }
+    addressList: [],
+    shippingId: null,
+    billingId: null,
   };
 
   const fakeAddresses = [
@@ -91,7 +90,8 @@ describe('addresses reducer', () => {
 
   const initialState = {
     addressList: [],
-    selectedId: null,
+    shippingId: null,
+    billingId: null,
   };
 
   const fakeAddresses = [
@@ -133,8 +133,8 @@ describe('addresses reducer', () => {
       const action = { type: 'EDIT_ADDRESS', address: newAddress };
       const result = addressesReducer(
         {
-        ...initialState,
-        addressList: fakeAddresses,
+          ...initialState,
+          addressList: fakeAddresses,
         },
         action
       );
@@ -149,8 +149,8 @@ describe('addresses reducer', () => {
       const action = { type: 'REMOVE_ADDRESS', address: newAddress };
       const result = addressesReducer(
         {
-        ...initialState,
-        addressList: fakeAddresses,
+          ...initialState,
+          addressList: fakeAddresses,
         },
         action
       );
@@ -159,11 +159,21 @@ describe('addresses reducer', () => {
     });
   });
 
-  describe('SET_SELECTED', () => {
+  describe('SELECT_SHIPPING', () => {
     it('sets selected address id', () => {
-      const action = { type: 'SET_SELECTED', addressId: 2 };
+      const action = { type: 'SELECT_SHIPPING', addressId: 2 };
       const result = addressesReducer(initialState, action);
-      expect(result.selectedId).to.equal(2);
+      console.log('result is:', result);
+      expect(result.shippingId).to.equal(2);
+      expect(result).to.not.equal(initialState);
+    });
+  });
+
+  describe('SELECT_BILLING', () => {
+    it('sets selected address id', () => {
+      const action = { type: 'SELECT_BILLING', addressId: 2 };
+      const result = addressesReducer(initialState, action);
+      expect(result.billingId).to.equal(2);
       expect(result).to.not.equal(initialState);
     });
   });
