@@ -8,9 +8,11 @@ class ProductPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            product: {}
+            product: {},
+            editing: false
         };
         this.handleClick = this.handleClick.bind(this);
+        this.renderEdit = this.renderEdit.bind(this);
     }
 
     componentDidMount(){
@@ -25,12 +27,28 @@ class ProductPage extends React.Component {
         this.props.addToCart(this.state.product);
     }
 
+    renderEdit(){
+        return (
+            <div>
+                <h1>EDITING PANEL</h1>
+            </div>
+        );
+    }
+
     render() {
         const product = this.state.product;
         const photo = (product.photos) ? product.photos[0] : '';
         const price = product.price;
+        const user = this.props.user;
         return (
             <div>
+                {
+                    ( user.accountType === 'ADMIN' ) &&
+                    (<button onClick={() => this.setState({editing: true})}>edit</button>)
+                }
+                {
+                    ( this.state.editing ) && this.renderEdit()
+                }
                 <h1>{product.name}</h1>
                 <div>
                     <img src={photo} />
@@ -45,6 +63,12 @@ class ProductPage extends React.Component {
     }
 }
 
+const mapState = state => {
+    return {
+        user: state.user
+    };
+};
+
 const mapDispatch = dispatch => {
     return {
         addToCart(product) {
@@ -53,4 +77,4 @@ const mapDispatch = dispatch => {
     };
 };
 
-export default connect(null, mapDispatch)(ProductPage);
+export default connect(mapState, mapDispatch)(ProductPage);
