@@ -78,7 +78,7 @@ export default function (state = defaultOrders, action) {
           return {
             ...order,
             status: action.status
-          }
+          };
         } else {
           return order;
         }
@@ -86,7 +86,7 @@ export default function (state = defaultOrders, action) {
       return {
         orders,
         fetching: false
-      }
+      };
     default:
       return state;
   }
