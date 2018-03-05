@@ -20,7 +20,7 @@ class Home extends React.Component {
                              });
                              return match.length;
                          });
-        return(
+        return (
             <div>
                 <Categories />
                 <Products products={products} />
