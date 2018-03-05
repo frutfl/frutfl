@@ -19,13 +19,14 @@ class Categories extends React.Component {
     }
 
     onClick(evt, id){
-        this.props.handleChange(`${id}`);
+        this.props.handleChange(id);
     }
 
     render(){
         const categories = this.state.categories;
         return (
             <div>
+                <button onClick={(evt) => this.onClick(evt, 'ALL')}>X</button>
                 {categories.map(cat => (
                     <button key={cat.id} onClick={(evt) => this.onClick(evt, cat.id)}>{ cat.name }</button>
                 ))}

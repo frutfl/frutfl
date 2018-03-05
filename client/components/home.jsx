@@ -12,7 +12,14 @@ class Home extends React.Component {
     }
 
     render() {
-        const products = this.props.products;
+        const products = ( this.props.category === 'ALL' ) ?
+                         this.props.products :
+                         this.props.products.filter(product => {
+                             const match = product.categories.filter(category => {
+                                 return category.id === this.props.category;
+                             });
+                             return match.length;
+                         });
         return(
             <div>
                 <Categories />
@@ -24,7 +31,8 @@ class Home extends React.Component {
 
 const mapState = state => {
     return {
-        products: state.products
+        products: state.products,
+        category: state.category
     };
 };
 
