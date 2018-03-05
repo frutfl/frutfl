@@ -2,6 +2,8 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {injectStripe, CardElement} from 'react-stripe-elements';
 
+import { submitOrder } from '../../store/order';
+
 class CheckoutForm extends React.Component {
   handleSubmit = (event) => {
     event.preventDefault();
@@ -14,7 +16,10 @@ class CheckoutForm extends React.Component {
       address_state: billingInfo.state,
       address_country: billingInfo.country,
     };
-    this.props.stripe.createToken(tokenInfo).then(result => console.log('result is:', result));
+    this.props.stripe.createToken(tokenInfo).then(({token}) => {
+      console.log('result is:', token);
+      submitOrder({ cart: this.props.cart, token: token, shippingAddressId: this.props.shippingId, billingAddressId: this.props.billingId });
+    });
   }
 
   render() {
