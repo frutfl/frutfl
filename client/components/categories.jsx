@@ -1,7 +1,9 @@
 import React from 'react';
 import axios from 'axios';
+import {connect} from 'react-redux';
+import updateCategory from '../store';
 
-export default class Categories extends React.Component {
+class Categories extends React.Component {
     constructor(props){
         super(props);
         this.state = {
@@ -17,14 +19,25 @@ export default class Categories extends React.Component {
 
     render(){
         const categories = this.state.categories;
-        return(
+        return (
             <div>
                 {
                     categories.map(cat => (
-                        <h1>{ cat.name }</h1>
+                        <h1 key={cat.id}>{ cat.name }</h1>
                     ))
                 }
             </div>
         );
     }
 }
+
+const mapDispatch = dispatch => {
+    return {
+        onClick(evt) {
+            dispatch(updateCategory(evt.target));
+        }
+    };
+};
+
+
+export default connect(null, mapDispatch)(Categories);
