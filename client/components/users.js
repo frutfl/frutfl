@@ -8,6 +8,7 @@ class Users extends Component {
 
     this.handleAccountTypeChange = this.handleAccountTypeChange.bind(this);
     this.handleIsActiveChange = this.handleIsActiveChange.bind(this);
+    this.handlePasswordReset = this.handlePasswordReset.bind(this);
   }
   componentDidMount() {
     this.props.fetchAllUsers();
@@ -27,6 +28,13 @@ class Users extends Component {
     }.bind(this);
   }
 
+  handlePasswordReset(user) {
+    return function(event) {
+      user.shouldResetPassword = event.target.value;
+      this.props.updateUserOnServer(user);
+    }.bind(this);
+  }
+
   render() {
     const users = this.props.users;
     return (
@@ -39,6 +47,7 @@ class Users extends Component {
               <th>Email</th>
               <th>Account Type</th>
               <th>Active Status</th>
+              <th>Should Reset Password</th>
             </tr>
           </thead>
           <tbody>
@@ -61,6 +70,14 @@ class Users extends Component {
                       value={user.isActive}>
                       <option value={true}>Active</option>
                       <option value={false}>Inactive</option>
+                    </select>
+                  </td>
+                  <td>
+                    <select
+                      onChange={this.handlePasswordReset(user)}
+                      value={user.shouldResetPassword}>
+                      <option value={true}>True</option>
+                      <option value={false}>False</option>
                     </select>
                   </td>
                 </tr>
