@@ -14,4 +14,15 @@ const isAdmin = (req, res, next) => {
   }
 };
 
-module.exports = { isLoggedIn, isAdmin };
+const isAdminOrSelf = (req, res, next) => {
+  if (!req.user ||
+        (req.user.accountType !== User.ACCOUNT_TYPES.ADMIN
+        && req.user.id !== +req.params.userId)) {
+    return res.sendStatus(404);
+  }
+  else {
+    next();
+  }
+};
+
+module.exports = { isLoggedIn, isAdmin, isAdminOrSelf };

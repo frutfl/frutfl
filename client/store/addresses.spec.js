@@ -65,6 +65,7 @@ describe('thunk creators', () => {
       return store.dispatch(putAddress(updatedAddress))
         .then(() => {
           const actions = store.getActions();
+          console.log('ACTIONS ARE:', actions);
           expect(actions[0].type).to.be.equal('EDIT_ADDRESS');
           expect(actions[0].address).to.be.deep.equal(updatedAddress);
         });
