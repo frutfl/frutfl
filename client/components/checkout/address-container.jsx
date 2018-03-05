@@ -22,7 +22,7 @@ class AddressContainer extends Component {
 
   render() {
     return (
-      this.state.editing ? <AddressEntry address={this.props.address} submit={this.props.updateAddress} stopEditing={this.toggleEditing} /> : <AddressInfo address={this.props.address} edit={this.toggleEditing} />
+      this.state.editing ? <AddressEntry address={this.props.address} submit={this.props.updateAddress} stopEditing={this.toggleEditing} /> : <AddressInfo address={this.props.address} edit={this.toggleEditing} selectAddress={this.props.selectAddress} selectedId={this.props.selectedId} />
     );
   }
 }

@@ -28,7 +28,7 @@ router.put('/:addressId', (req, res, next) => {
     returning: true,
   })
     .then(([numUpdated, [updatedAddress]]) =>
-      (numUpdated ? res.status(204).json(updatedAddress) : res.sendStatus(404))
+      (numUpdated ? res.json(updatedAddress) : res.sendStatus(404))
     )
     .catch(next);
 });

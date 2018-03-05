@@ -3,8 +3,6 @@ import { connect } from 'react-redux';
 
 import { addressViewableAttributes as attributes } from './helpers';
 
-//gets address, editing toggle, and submit function from props, gets address attributes from helpers, renders form for editing or creating an address
-
 class AddressEntry extends Component {
 
   constructor(props) {
@@ -18,11 +16,9 @@ class AddressEntry extends Component {
     this.setState({ [event.target.id]: event.target.value });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    console.log('sending to thunk', this.state);
+  handleSubmit() {
     this.props.submit(this.state);
-    this.props.stopEditing();
+    if (this.props.stopEditing) this.props.stopEditing();
   }
 
   render() {
