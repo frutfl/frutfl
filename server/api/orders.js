@@ -25,3 +25,15 @@ router.get('/', (req, res, next) => {
     .catch(next);
   }
 });
+
+router.put('/:orderId', (req, res, next) => {
+  if (!req.user || req.user.accountType !== User.ACCOUNT_TYPES.ADMIN) {
+    return res.sendStatus(404);
+  }
+  Order.update(
+    { status: req.body.status },
+    { where: { id: req.params.orderId }}
+  )
+  .then(() => res.sendStatus(200))
+  .catch(next);
+});

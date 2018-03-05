@@ -2,31 +2,31 @@
   {
     "name": "Cody FS",
     "email": "cody@email.com",
-    "accountType": "user",
+    "accountType": "USER",
     "password": 123
   },
   {
     "name": "Murphy FS",
     "email": "murphy@email.com",
-    "accountType": "user",
+    "accountType": "USER",
     "password": 123
   },
   {
     "name": "Matthew Gaba",
     "email": "matthew@email.com",
-    "accountType": "admin",
+    "accountType": "ADMIN",
     "password": 456
   },
   {
     "name": "Whit Johnson",
     "email": "whit@email.com",
-    "accountType": "admin",
+    "accountType": "ADMIN",
     "password": 456
   },
   {
     "name": "Rob Rinaldo",
     "email": "rob@email.com",
-    "accountType": "admin",
+    "accountType": "ADMIN",
     "password": 456
   }
 ]
