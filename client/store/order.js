@@ -7,6 +7,7 @@ const GET_ORDERS = 'GET_ORDERS';
 const DESTROY_ORDERS = 'DESTROY_ORDERS';
 const FETCHING_ORDERS = 'FETCHING_ORDERS';
 const FETCHED_ORDERS = 'FETCHED_ORDERS';
+const UPDATE_ORDER_STATUS = 'UPDATE_ORDER_STATUS';
 
 /**
  * INITIAL STATE
@@ -23,6 +24,8 @@ const getOrders = orders => ({type: GET_ORDERS, orders});
 export const destroyOrders = () => ({type: DESTROY_ORDERS});
 const fetchingOrders = () => ({type: FETCHING_ORDERS});
 const fetchedOrders = () => ({type: FETCHED_ORDERS});
+const updateOrderStatus = (orderId, status) =>
+  ({type: UPDATE_ORDER_STATUS, orderId, status });
 
 /**
  * THUNK CREATORS
@@ -36,6 +39,15 @@ export const fetchOrders = () =>
         dispatch(fetchedOrders());
       })
       .catch(err => console.log(err));
+    };
+
+export const writeOrderStatus = (orderId, status) =>
+    dispatch => {
+      return axios.put(`/api/orders/${orderId}`, {status})
+      .then(() => {
+        dispatch(updateOrderStatus(orderId, status));
+      })
+      .catch(console.log.bind(console));
     };
 
 /**
@@ -58,6 +70,21 @@ export default function (state = defaultOrders, action) {
     case FETCHED_ORDERS:
       return {
         orders: state.orders,
+        fetching: false
+      };
+    case UPDATE_ORDER_STATUS:
+      let orders = state.orders.map(order => {
+        if (order.id === action.orderId) {
+          return {
+            ...order,
+            status: action.status
+          };
+        } else {
+          return order;
+        }
+      });
+      return {
+        orders,
         fetching: false
       };
     default:
