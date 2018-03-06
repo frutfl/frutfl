@@ -12,7 +12,6 @@ function renderStars(rating) {
 }
 
 const Review = (props) => {
-  console.log(props);
   const product = props.product;
   return (
     <div>

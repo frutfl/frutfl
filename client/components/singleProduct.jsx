@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import Review from './review';
+import WriteReview from './write-review.js';
 import {connect} from 'react-redux';
 import {writeCartItemToStorage} from '../store';
 import {Link} from 'react-router-dom';
@@ -12,9 +13,10 @@ class ProductPage extends React.Component {
             product: {}
         };
         this.handleClick = this.handleClick.bind(this);
+        this.updateProductReview = this.updateProductReview.bind(this);
     }
 
-    componentDidMount(){
+    componentDidMount() {
         axios.get(`/api/products/${this.props.match.params.id}`)
              .then(product => {
                  return product.data;
@@ -22,8 +24,14 @@ class ProductPage extends React.Component {
              .then(productData => this.setState({product: productData}));
     }
 
-    handleClick(){
+    handleClick() {
         this.props.addToCart(this.state.product);
+    }
+
+    updateProductReview(review) {
+        const product = this.state.product;
+        product.reviews = [...product.reviews, review];
+        this.setState({product});
     }
 
     render() {
@@ -42,6 +50,7 @@ class ProductPage extends React.Component {
                     <button onClick={this.handleClick}>add to cart</button>
                 </Link>
                 <Review product={product} />
+                <WriteReview product={product} updateProductReview={this.updateProductReview} />
             </div>
         );
     }
