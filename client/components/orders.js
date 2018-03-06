@@ -110,7 +110,7 @@ class Orders extends Component {
                   <OrderItem key={orderItem.id} item={orderItem} />
                 );
               })}
-              { this.renderAddress(order.address) }
+              { this.renderAddress(order.shippingAddress) }
               <div>
                 Total: ${ this.computeTotalFromOrderItems(order.orderItems) }
               </div>

@@ -6,10 +6,10 @@ import {Link} from 'react-router-dom';
 const Cart = ({cartItems}) => {
   function renderShoppingCart() {
     return (
-      <div>
-        <table>
+      <div className="cart-container">
+        <table className="cart-table">
           <thead>
-            <tr>
+            <tr className="cart-card">
               <th />
               <th />
               <th>Quantity</th>
@@ -21,23 +21,31 @@ const Cart = ({cartItems}) => {
             {cartItems.map(item => (
               <CartItem key={item.product.id} item={item} />
             ))}
+            <tr className="cart-card">
+              <td />
+              <td />
+              <td className="total-cell"><strong>Total</strong></td>
+              <td>
+                <strong>
+                  ${
+                    cartItems.reduce((sum, item) =>
+                      sum + (item.product.price * item.quantity), 0).toFixed(2)
+                  }
+                </strong>
+              </td>
+              <td />
+            </tr>
           </tbody>
         </table>
-        <div>
-          ${
-            cartItems.reduce((sum, item) =>
-              sum + (item.product.price * item.quantity), 0).toFixed(2)
-          }
-        </div>
         <Link to="/checkout">
-          <button>Proceed to checkout</button>
+          <button className="cart-checkout-button">Proceed to checkout</button>
         </Link>
       </div>
     );
   }
   return (
-    <div>
-      <h1>Shopping cart</h1>
+    <div className="cart-page">
+      <h1>Shopping Cart</h1>
       {
         cartItems.length > 0 ?
         renderShoppingCart() :

@@ -92,17 +92,20 @@ async function seedOrders() {
   let order1 = await Order.create({
     status: Order.STATUSES.CREATED,
     userId: 1,
-    addressId: address.id
+    shippingAddressId: address.id,
+    billingAddressId: address.id
   });
   let order2 = await Order.create({
     status: Order.STATUSES.CREATED,
     userId: 1,
-    addressId: address.id
+    shippingAddressId: address.id,
+    billingAddressId: address.id
   });
   let order3 = await Order.create({
     status: Order.STATUSES.CREATED,
     userId: 2,
-    addressId: address.id
+    shippingAddressId: address.id,
+    billingAddressId: address.id
   });
   await OrderItem.create({
     quantity: 1,

@@ -267,3 +267,50 @@ button:hover {
     margin-left: 20px;
 }
 
+.cart-image {
+  width: 60px;
+}
+
+.cart-card {
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cart-card td {
+  padding: 10px;
+}
+
+.cart-card th {
+  padding: 5px;
+}
+
+.cart-table {
+  border-collapse: collapse;
+  font-size: 20px;
+}
+
+.total-cell {
+  text-align: right;
+}
+
+.cart-card button {
+  margin: 0px 7px;
+}
+
+.cart-checkout-button {
+  position: absolute;
+  right: 0;
+}
+
+.cart-container {
+  width: fit-content;
+  position: relative;
+}
+
+.cart-page {
+  margin-left: 20px;
+}
+
+.cart-page h1 {
+  margin: 20px 0;
+}
