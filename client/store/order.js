@@ -50,6 +50,11 @@ export const writeOrderStatus = (orderId, status) =>
       .catch(console.log.bind(console));
     };
 
+export const submitOrder = ({ cart, token, shippingAddressId, billingAddressId }) => {
+  const items = cart.map(cartItem => ({ id: cartItem.product.id, quantity: cartItem.quantity }));
+  return axios.post('/api/orders', { shippingAddressId, billingAddressId, items, token });
+};
+
 /**
  * REDUCER
  */
