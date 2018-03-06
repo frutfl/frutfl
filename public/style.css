@@ -1,3 +1,16 @@
+/*
+  lime: #99e265
+  chili: #af473c
+  herb: #626e60
+  charcoal: #3C3C3
+  background: #edf1e9
+  other background: #F6F6F6
+*/
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: sans-serif;
 }
@@ -15,22 +28,18 @@ nav a {
   margin: 1em;
 }
 
-form div {
+.checkout form div {
   margin: 1em;
   display: inline-block;
 }
 
-* {
-  box-sizing: border-box;
-}
-
-body, html {
+.checkout {
   background-color: #f6f9fc;
   font-size: 18px;
   font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
 }
 
-h2 {
+.checkout h2 {
   color: #32325d;
   font-weight: 400;
   line-height: 50px;
@@ -39,20 +48,20 @@ h2 {
   padding: 0;
 }
 
-.Checkout {
+.checkout .Checkout {
   margin: 0 auto;
   max-width: 800px;
   box-sizing: border-box;
   padding: 0 5px;
 }
 
-label {
+.checkout label {
   color: #6b7c93;
   font-weight: 300;
   letter-spacing: 0.025em;
 }
 
-button {
+.checkout button {
   white-space: nowrap;
   border: 0;
   outline: 0;
@@ -74,13 +83,13 @@ button {
   margin-top: 10px;
 }
 
-form {
+.checkout form {
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 3px solid #e6ebf1;
 }
 
-button:hover {
+.checkout button:hover {
   color: #fff;
   cursor: pointer;
   background-color: #7795f8;
@@ -88,7 +97,7 @@ button:hover {
   box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
 }
 
-.StripeElement {
+.checkout .StripeElement {
   display: block;
   margin: 10px 0 20px 0;
   max-width: 500px;
@@ -98,16 +107,21 @@ button:hover {
   background: white;
 }
 
-.StripeElement--focus {
+.checkout .StripeElement--focus {
   box-shadow: rgba(50, 50, 93, 0.109804) 0px 4px 6px, rgba(0, 0, 0, 0.0784314) 0px 1px 3px;
   -webkit-transition: all 150ms ease;
   transition: all 150ms ease;
 }
 
-.StripeElement.PaymentRequestButton {
+.checkout .StripeElement.PaymentRequestButton {
   padding: 0;
 }
 
-.selected {
+.checkout .selected {
   background-color: lightblue;
+}
+
+.navbar nav {
+  display: flex;
+  justify-content: space-between;
 }
