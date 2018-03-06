@@ -8,7 +8,6 @@ export default function Product(props) {
     const image = product.photos[0];
     const quantity = product.unit;
     const price = +product.price;
-    console.log(typeof price)
     return (
         <Link to={`products/${product.id}`}>
             <div>
