@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // a dumb rendering component to be used in the Home, and Products views
 
 export default function Product(props) {
@@ -9,12 +9,12 @@ export default function Product(props) {
     const quantity = product.unit;
     const price = +product.price;
     return (
-        <Link to={`products/${product.id}`}>
-            <div>
-                <h4>{name} </h4>
+        <div className="product-listing">
+            <Link to={`products/${product.id}`}>
                 <img src={image} />
-                <h5>{price.toFixed(2)} USD {quantity}</h5>
-            </div>
-        </Link>
+                <h4>{name} </h4>
+                <p>${price.toFixed(2)} - {quantity}</p>
+            </Link>
+        </div>
     );
 }
