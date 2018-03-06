@@ -103,26 +103,37 @@ class Orders extends Component {
         }
         { orders.map(order => {
           return (
-            <div key={order.id}>
-              <div>{this.convertTimestampToPrettyDate(order.createdAt)}</div>
-              { order.orderItems.map(orderItem => {
-                return (
-                  <OrderItem key={orderItem.id} item={orderItem} />
-                );
-              })}
-              { this.renderAddress(order.shippingAddress) }
-              <div>
-                Total: ${ this.computeTotalFromOrderItems(order.orderItems) }
+            <div key={order.id} className="order-container">
+              <div className="order-title">
+                <span className="order-date">
+                  <strong>{this.convertTimestampToPrettyDate(order.createdAt)}</strong>
+                </span>
+                <span>
+                  Total: ${this.computeTotalFromOrderItems(order.orderItems)}
+                </span>
               </div>
-              <div>
-                Status: {
-                  user.accountType === 'ADMIN'
-                  ? this.renderOrderStatusEditDropdown(
-                      this.handleOrderStatusEdit(order),
-                      order.status
-                    )
-                  : this.renderNonAdminStatus(order.status)
-                }
+              <div className="order-information">
+                <div>
+                { order.orderItems.map(orderItem => {
+                  return (
+                    <OrderItem key={orderItem.id} item={orderItem} />
+                  );
+                })}
+                </div>
+                <div>
+
+                  { this.renderAddress(order.shippingAddress) }
+                  <div className="order-status">
+                    Status: {
+                      user.accountType === 'ADMIN'
+                      ? this.renderOrderStatusEditDropdown(
+                          this.handleOrderStatusEdit(order),
+                          order.status
+                        )
+                      : this.renderNonAdminStatus(order.status)
+                    }
+                  </div>
+                </div>
               </div>
             </div>
           );

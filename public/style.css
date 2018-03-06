@@ -314,3 +314,38 @@ button:hover {
 .cart-page h1 {
   margin: 20px 0;
 }
+
+.order-container {
+  background-color: white;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+  width: 550px;
+  margin: 40px;
+  padding: 20px;
+}
+
+.order-information {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.order-container img {
+  width: 160px;
+  height: 160px;
+}
+.order-container a {
+  display: block;
+}
+.order-item {
+  display: flex;
+  align-items: center;
+}
+.order-title {
+  margin-bottom: 20px;
+}
+.order-date {
+  margin-right: 1em;
+}
+.order-status {
+  margin-top: 1em;
+}
