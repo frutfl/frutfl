@@ -35,7 +35,6 @@ class ProductEdit extends React.Component {
     render(){
         return (
             <div>
-                <h4>EDITING PANEL {this.props.product.name}</h4>
                 <form onSubmit={this.handleSubmit}>
                     <label>
                         Species:

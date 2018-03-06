@@ -60,40 +60,10 @@ label {
   letter-spacing: 0.025em;
 }
 
-.checkout button {
-  white-space: nowrap;
-  border: 0;
-  outline: 0;
-  display: inline-block;
-  height: 40px;
-  line-height: 40px;
-  padding: 0 14px;
-  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-  color: #fff;
-  border-radius: 4px;
-  font-size: 15px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.025em;
-  background-color: #6772e5;
-  text-decoration: none;
-  -webkit-transition: all 150ms ease;
-  transition: all 150ms ease;
-  margin-top: 10px;
-}
-
 .checkout form {
   margin-bottom: 40px;
   padding-bottom: 40px;
   border-bottom: 3px solid #e6ebf1;
-}
-
-.checkout button:hover {
-  color: #fff;
-  cursor: pointer;
-  background-color: #7795f8;
-  transform: translateY(-1px);
-  box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
 }
 
 .checkout .StripeElement {
@@ -195,3 +165,105 @@ label {
 .categories a:last-of-type {
   border-right: none;
 }
+
+.single-product-container .card {
+    width: 80%;
+    max-width: 700px;
+    padding: 20px;
+    margin: 20px;
+    background-color: white;
+    text-align: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 3px 10px 0 rgba(0, 0, 0, 0.19);
+    color: #af473c;
+    display: flex;
+}
+
+.single-product-container .card img {
+    width: 300px;
+}
+
+#description {
+    text-align: left;
+    margin-top: 40px;
+    margin-left: 20px;
+}
+
+button {
+    /* padding: 5px 10px; */
+    /* margin-top: 8px; */
+    white-space: nowrap;
+    border: 0;
+    outline: 0;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 14px;
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    color: #fff;
+    border-radius: 4px;
+    font-size: 15px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.025em;
+    background-color: #af473c;
+    text-decoration: none;
+    -webkit-transition: all 150ms ease;
+    transition: all 150ms ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    color: #fff;
+    cursor: pointer;
+    background-color: #df5b4c;
+    transform: translateY(-1px);
+    box-shadow: 0 7px 14px rgba(50, 50, 93, .10), 0 3px 6px rgba(0, 0, 0, .08);
+}
+
+.review-header {
+    display: flex;
+    margin-bottom: 10px;
+    /* justify-content: space-between; */
+}
+
+.review-header img {
+    height: 30px;
+}
+
+.review-header div:first-of-type {
+    margin-right: 40px;
+}
+
+.review-container {
+    margin: 20px;
+    margin-left: 40px;
+}
+
+.review-item {
+    margin-bottom: 30px;
+}
+
+.review-item > p {
+    margin-left: 10px;
+}
+
+.review-write {
+    margin: 40px;
+}
+
+.review-write input {
+    width: 300px;
+    padding: 5px;
+}
+
+.review-write textarea {
+    padding: 5px;
+    width: 300px;
+    height: 200px;
+    resize: vertical;
+}
+
+#edit-button {
+    margin-left: 20px;
+}
+

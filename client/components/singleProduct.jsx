@@ -45,30 +45,38 @@ class ProductPage extends React.Component {
         const isLoggedIn = !!user.id;
 
         return (
-            <div>
+            <div className="single-product-container">
                 {
                     ( user.accountType === 'ADMIN' ) &&
                     ( this.state.editing
-                    ? <button onClick={() => this.setState({editing: false})}>close</button>
-                    : <button onClick={() => this.setState({editing: true})}>edit</button>)
+                    ? <button id="edit-button" onClick={() => this.setState({editing: false})}>close</button>
+                    : <button id="edit-button" onClick={() => this.setState({editing: true})}>edit</button>)
                 }
                 {
                     ( this.state.editing ) && <ProductEdit product={product} />
                 }
-                <h1>{product.name}</h1>
-                <div>
-                    <img src={photo} />
+                <div className="card">
+                    <div>
+                        <h1>{product.name}</h1>
+                        <div>
+                            <img src={photo} />
+                        </div>
+                        <p>${price} - {product.unit}</p>
+                        <Link to="/cart">
+                            <button onClick={this.handleClick}>add to cart</button>
+                        </Link>
+                    </div>
+                    <div>
+                        <p id="description">
+                            {product.description}
+                        </p>
+                    </div>
                 </div>
-                <span>{price} USD </span>
-                <span> {product.unit} </span>
-                <Link to="/cart">
-                    <button onClick={this.handleClick}>add to cart</button>
-                </Link>
                 <Review product={product} />
                 { isLoggedIn &&
-                    <WriteReview
-                        product={product}
-                        updateProductReview={this.updateProductReview} /> }
+                  <WriteReview
+                      product={product}
+                      updateProductReview={this.updateProductReview} /> }
             </div>
         );
     }
