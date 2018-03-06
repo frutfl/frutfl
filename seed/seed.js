@@ -28,7 +28,7 @@ seedFiles.forEach(seedFile => {
 
 async function seedProducts() {
   for (let i = 0; i < products.length; i++) {
-    await Product.create({ ...products[i], photos: [products[i].photos] })
+    await Product.create({ ...products[i], photos: ['/images/' + products[i].photos] })
       .then(newProduct => {
         const categories = [];
         if (products[i].Category1) {

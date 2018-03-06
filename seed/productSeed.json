@@ -556,7 +556,7 @@
     "unit": "2 lb bag",
     "inventory": 52,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -569,7 +569,7 @@
     "unit": "3 lb bag",
     "inventory": 53,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -582,7 +582,7 @@
     "unit": "5 lb bag",
     "inventory": 54,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -595,7 +595,7 @@
     "unit": "per pound",
     "inventory": 55,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -608,7 +608,7 @@
     "unit": "2 lb bag",
     "inventory": 56,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -621,7 +621,7 @@
     "unit": "3 lb bag",
     "inventory": 57,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -634,7 +634,7 @@
     "unit": "per pound",
     "inventory": 58,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "apple-red-delicious.jpg"
+    "photos": "apple-red-delicious.jpeg"
   },
   {
     "Category1": "Apples",
@@ -712,7 +712,7 @@
     "unit": "per pound",
     "inventory": 64,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "banana.jpg"
+    "photos": "banana.jpeg"
   },
   {
     "Category1": "Tropical",
@@ -725,7 +725,7 @@
     "unit": "per pound",
     "inventory": 65,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "banana.jpg"
+    "photos": "banana.jpeg"
   },
   {
     "Category1": "Berries",
@@ -1089,7 +1089,7 @@
     "unit": "each",
     "inventory": 93,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "honeydew.jpg"
+    "photos": "honeydew.jpeg"
   },
   {
     "Category1": "Melons",
@@ -1102,7 +1102,7 @@
     "unit": "per pound",
     "inventory": 94,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "honeydew.jpg"
+    "photos": "honeydew.jpeg"
   },
   {
     "Category1": "",
@@ -1245,7 +1245,7 @@
     "unit": "each",
     "inventory": 105,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "mango.jpg"
+    "photos": "mango.jpeg"
   },
   {
     "Category1": "Tropical",
@@ -1258,7 +1258,7 @@
     "unit": "per pound",
     "inventory": 106,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "mango.jpg"
+    "photos": "mango.jpeg"
   },
   {
     "Category1": "Tropical",
@@ -1271,7 +1271,7 @@
     "unit": "each",
     "inventory": 107,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "mango.jpg"
+    "photos": "mango.jpeg"
   },
   {
     "Category1": "Stone Fruit",
@@ -1297,7 +1297,7 @@
     "unit": "per pound",
     "inventory": 109,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "nectarine-yellow.jpg"
+    "photos": "nectarine-yellow.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1479,7 +1479,7 @@
     "unit": "each",
     "inventory": 123,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "papaya.jpg"
+    "photos": "papaya.jpeg"
   },
   {
     "Category1": "Tropical",
@@ -1492,7 +1492,7 @@
     "unit": "per pound",
     "inventory": 124,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "papaya.jpg"
+    "photos": "papaya.jpeg"
   },
   {
     "Category1": "Stone Fruit",
@@ -1856,7 +1856,7 @@
     "unit": "2 lb bag",
     "inventory": 152,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1869,7 +1869,7 @@
     "unit": "3 lb bag",
     "inventory": 153,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1882,7 +1882,7 @@
     "unit": "each",
     "inventory": 154,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1895,7 +1895,7 @@
     "unit": "per pound",
     "inventory": 155,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1908,7 +1908,7 @@
     "unit": "3 lb bag",
     "inventory": 156,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1921,7 +1921,7 @@
     "unit": "per pound",
     "inventory": 157,
     "isCurrentlyAvailable": "TRUE",
-    "photos": "tangerine.jpg"
+    "photos": "tangerine.jpeg"
   },
   {
     "Category1": "Melons",
