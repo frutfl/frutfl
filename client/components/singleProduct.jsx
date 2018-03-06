@@ -3,6 +3,7 @@ import axios from 'axios';
 import {connect} from 'react-redux';
 import {writeCartItemToStorage} from '../store';
 import {Link} from 'react-router-dom';
+import ProductEdit from './productEdit.jsx';
 
 class ProductPage extends React.Component {
     constructor(props){
@@ -12,7 +13,6 @@ class ProductPage extends React.Component {
             editing: false
         };
         this.handleClick = this.handleClick.bind(this);
-        this.renderEdit = this.renderEdit.bind(this);
     }
 
     componentDidMount(){
@@ -27,14 +27,6 @@ class ProductPage extends React.Component {
         this.props.addToCart(this.state.product);
     }
 
-    renderEdit(){
-        return (
-            <div>
-                <h1>EDITING PANEL</h1>
-            </div>
-        );
-    }
-
     render() {
         const product = this.state.product;
         const photo = (product.photos) ? product.photos[0] : '';
@@ -44,10 +36,12 @@ class ProductPage extends React.Component {
             <div>
                 {
                     ( user.accountType === 'ADMIN' ) &&
-                    (<button onClick={() => this.setState({editing: true})}>edit</button>)
+                    ( this.state.editing
+                    ? <button onClick={() => this.setState({editing: false})}>close</button>
+                    : <button onClick={() => this.setState({editing: true})}>edit</button>)
                 }
                 {
-                    ( this.state.editing ) && this.renderEdit()
+                    ( this.state.editing ) && <ProductEdit product={product} />
                 }
                 <h1>{product.name}</h1>
                 <div>
