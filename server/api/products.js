@@ -1,5 +1,7 @@
 const router = require('express').Router();
+const {isAdmin} = require('../auth/middleware');
 const {Product, Category, User, Review} = require('../db/models');
+
 module.exports = router;
 
 router.get('/', (req, res, next) => {
@@ -26,5 +28,18 @@ router.get('/:id', (req, res, next) => {
         ]
     })
         .then(product => res.json(product))
+        .catch(next);
+});
+
+router.put('/:id', isAdmin, (req, res, next) => {
+    Product.update(
+        req.body, {
+            where: {id: req.params.id},
+            returning: true
+        })
+        .then(product => {
+            res.status(200);
+            res.json(product);
+        })
         .catch(next);
 });

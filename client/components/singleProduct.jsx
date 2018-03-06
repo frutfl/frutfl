@@ -5,12 +5,14 @@ import WriteReview from './write-review.js';
 import {connect} from 'react-redux';
 import {writeCartItemToStorage} from '../store';
 import {Link} from 'react-router-dom';
+import ProductEdit from './productEdit.jsx';
 
 class ProductPage extends React.Component {
     constructor(props){
         super(props);
         this.state = {
-            product: {}
+            product: {},
+            editing: false
         };
         this.handleClick = this.handleClick.bind(this);
         this.updateProductReview = this.updateProductReview.bind(this);
@@ -38,9 +40,20 @@ class ProductPage extends React.Component {
         const product = this.state.product;
         const photo = (product.photos) ? product.photos[0] : '';
         const price = product.price;
-        const isLoggedIn = this.props.isLoggedIn;
+        const user = this.props.user;
+        const isLoggedIn = !!user.id;
+      
         return (
             <div>
+                {
+                    ( user.accountType === 'ADMIN' ) &&
+                    ( this.state.editing
+                    ? <button onClick={() => this.setState({editing: false})}>close</button>
+                    : <button onClick={() => this.setState({editing: true})}>edit</button>)
+                }
+                {
+                    ( this.state.editing ) && <ProductEdit product={product} />
+                }
                 <h1>{product.name}</h1>
                 <div>
                     <img src={photo} />
@@ -60,9 +73,9 @@ class ProductPage extends React.Component {
     }
 }
 
-const mapState = (state) => {
+const mapState = state => {
     return {
-        isLoggedIn: !!state.user.id
+        user: state.user
     };
 };
 
