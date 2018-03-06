@@ -13,6 +13,7 @@
 
 body {
   font-family: sans-serif;
+  background-color: #edf1e9;
 }
 
 a {
@@ -124,4 +125,10 @@ nav a {
 .navbar nav {
   display: flex;
   justify-content: space-between;
+  align-items: flex-end;
+}
+
+.navbar img {
+  height: 100px;
+  width: 100px;
 }
