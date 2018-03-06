@@ -11,7 +11,7 @@ function handleSubmit(productId, user, updateProductReview) {
       rating: evt.target.rating.value,
       title: evt.target.title.value,
       userId: user.id
-    }
+    };
     axios.post('/api/reviews', review)
     .then((res) => {
       const createdReview = res.data;
@@ -19,7 +19,7 @@ function handleSubmit(productId, user, updateProductReview) {
       updateProductReview(createdReview);
     })
     .catch(console.error.bind(console));
-  }
+  };
 }
 
 const WriteReview = (props) => {
@@ -53,13 +53,13 @@ const WriteReview = (props) => {
         </div>
       </form>
     </div>
-  )
-}
+  );
+};
 
 const mapState = (state) => {
   return {
     user: state.user
-  }
-}
+  };
+};
 
 export default connect(mapState, null)(WriteReview);
