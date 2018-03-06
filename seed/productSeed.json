@@ -9,7 +9,8 @@
     "price": 1.24,
     "unit": "per pound",
     "inventory": 10,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-braeburn.jpg"
   },
   {
     "Category1": "Apples",
@@ -21,7 +22,8 @@
     "price": 2.5,
     "unit": "3 lb bag",
     "inventory": 11,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-braeburn.jpg"
   },
   {
     "Category1": "Apples",
@@ -33,7 +35,8 @@
     "price": 2.2,
     "unit": "per pound",
     "inventory": 12,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-braeburn.jpg"
   },
   {
     "Category1": "Apples",
@@ -45,7 +48,8 @@
     "price": 2.5,
     "unit": "2 lb bag",
     "inventory": 13,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -57,7 +61,8 @@
     "price": 3.16,
     "unit": "3 lb bag",
     "inventory": 14,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -69,7 +74,8 @@
     "price": 5.95,
     "unit": "5 lb bag",
     "inventory": 15,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -81,7 +87,8 @@
     "price": 1.45,
     "unit": "per pound",
     "inventory": 16,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -93,7 +100,8 @@
     "price": 3.32,
     "unit": "2 lb bag",
     "inventory": 17,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -105,7 +113,8 @@
     "price": 3.01,
     "unit": "3 lb bag",
     "inventory": 18,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -117,7 +126,8 @@
     "price": 2.23,
     "unit": "per pound",
     "inventory": 19,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-fuji.jpg"
   },
   {
     "Category1": "Apples",
@@ -129,7 +139,8 @@
     "price": 2.45,
     "unit": "2 lb bag",
     "inventory": 20,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -141,7 +152,8 @@
     "price": 2.86,
     "unit": "3 lb bag",
     "inventory": 21,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -153,7 +165,8 @@
     "price": 5.2,
     "unit": "5 lb bag",
     "inventory": 22,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -165,7 +178,8 @@
     "price": 1.39,
     "unit": "per pound",
     "inventory": 23,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -177,7 +191,8 @@
     "price": 3.28,
     "unit": "2 lb bag",
     "inventory": 24,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -189,7 +204,8 @@
     "price": 3.04,
     "unit": "3 lb bag",
     "inventory": 25,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -201,7 +217,8 @@
     "price": 2.13,
     "unit": "per pound",
     "inventory": 26,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-gala.jpeg"
   },
   {
     "Category1": "Apples",
@@ -213,7 +230,8 @@
     "price": 2.5,
     "unit": "2 lb bag",
     "inventory": 27,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-golden-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -225,7 +243,8 @@
     "price": 2.61,
     "unit": "3 lb bag",
     "inventory": 28,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-golden-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -237,7 +256,8 @@
     "price": 4.98,
     "unit": "5 lb bag",
     "inventory": 29,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-golden-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -249,7 +269,8 @@
     "price": 1.3,
     "unit": "per pound",
     "inventory": 30,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-golden-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -261,7 +282,8 @@
     "price": 2.1,
     "unit": "per pound",
     "inventory": 31,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-golden-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -273,7 +295,8 @@
     "price": 2.78,
     "unit": "2 lb bag",
     "inventory": 32,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -285,7 +308,8 @@
     "price": 2.48,
     "unit": "3 lb bag",
     "inventory": 33,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -297,7 +321,8 @@
     "price": 5.95,
     "unit": "5 lb bag",
     "inventory": 34,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -309,7 +334,8 @@
     "price": 1.37,
     "unit": "per pound",
     "inventory": 35,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -321,7 +347,8 @@
     "price": 3.12,
     "unit": "2 lb bag",
     "inventory": 36,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -333,7 +360,8 @@
     "price": 2.88,
     "unit": "3 lb bag",
     "inventory": 37,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -345,7 +373,8 @@
     "price": 2.17,
     "unit": "per pound",
     "inventory": 38,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-granny-smith.png"
   },
   {
     "Category1": "Apples",
@@ -357,7 +386,8 @@
     "price": 4,
     "unit": "2 lb bag",
     "inventory": 39,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-honeycrisp.jpg"
   },
   {
     "Category1": "Apples",
@@ -369,7 +399,8 @@
     "price": 2.4,
     "unit": "per pound",
     "inventory": 40,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-honeycrisp.jpg"
   },
   {
     "Category1": "Apples",
@@ -381,7 +412,8 @@
     "price": 5.02,
     "unit": "2 lb bag",
     "inventory": 41,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-honeycrisp.jpg"
   },
   {
     "Category1": "Apples",
@@ -393,7 +425,8 @@
     "price": 2.5,
     "unit": "per pound",
     "inventory": 42,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-honeycrisp.jpg"
   },
   {
     "Category1": "Apples",
@@ -405,7 +438,8 @@
     "price": 1.41,
     "unit": "per pound",
     "inventory": 43,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-jonagold.jpg"
   },
   {
     "Category1": "Apples",
@@ -417,7 +451,8 @@
     "price": 2,
     "unit": "2 lb bag",
     "inventory": 44,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-mcintosh.jpg"
   },
   {
     "Category1": "Apples",
@@ -429,7 +464,8 @@
     "price": 3.41,
     "unit": "3 lb bag",
     "inventory": 45,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-mcintosh.jpg"
   },
   {
     "Category1": "Apples",
@@ -441,7 +477,8 @@
     "price": 1.59,
     "unit": "per pound",
     "inventory": 46,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-mcintosh.jpg"
   },
   {
     "Category1": "Apples",
@@ -453,7 +490,8 @@
     "price": 2.5,
     "unit": "2 lb bag",
     "inventory": 47,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-pink-lady.jpeg"
   },
   {
     "Category1": "Apples",
@@ -465,7 +503,8 @@
     "price": 2.83,
     "unit": "3 lb bag",
     "inventory": 48,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-pink-lady.jpeg"
   },
   {
     "Category1": "Apples",
@@ -477,7 +516,8 @@
     "price": 1.07,
     "unit": "per pound",
     "inventory": 49,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-pink-lady.jpeg"
   },
   {
     "Category1": "Apples",
@@ -489,7 +529,8 @@
     "price": 2.99,
     "unit": "2 lb bag",
     "inventory": 50,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-pink-lady.jpeg"
   },
   {
     "Category1": "Apples",
@@ -501,7 +542,8 @@
     "price": 2.34,
     "unit": "per pound",
     "inventory": 51,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-pink-lady.jpeg"
   },
   {
     "Category1": "Apples",
@@ -513,7 +555,8 @@
     "price": 2.4,
     "unit": "2 lb bag",
     "inventory": 52,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -525,7 +568,8 @@
     "price": 2.62,
     "unit": "3 lb bag",
     "inventory": 53,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -537,7 +581,8 @@
     "price": 4.14,
     "unit": "5 lb bag",
     "inventory": 54,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -549,7 +594,8 @@
     "price": 1.2,
     "unit": "per pound",
     "inventory": 55,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -561,7 +607,8 @@
     "price": 2.77,
     "unit": "2 lb bag",
     "inventory": 56,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -573,7 +620,8 @@
     "price": 3.71,
     "unit": "3 lb bag",
     "inventory": 57,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -585,7 +633,8 @@
     "price": 1.93,
     "unit": "per pound",
     "inventory": 58,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-red-delicious.jpg"
   },
   {
     "Category1": "Apples",
@@ -597,7 +646,8 @@
     "price": 2.75,
     "unit": "3 lb bag",
     "inventory": 59,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-rome.png"
   },
   {
     "Category1": "Apples",
@@ -609,10 +659,11 @@
     "price": 0.99,
     "unit": "per pound",
     "inventory": 60,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "apple-rome.png"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Avocados",
     "variety": "",
@@ -621,10 +672,11 @@
     "price": 1.02,
     "unit": "each",
     "inventory": 61,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "avocado.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Avocados",
     "variety": "",
@@ -633,10 +685,11 @@
     "price": 3.61,
     "unit": "per pound",
     "inventory": 62,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "avocado.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Avocados",
     "variety": "",
@@ -645,10 +698,11 @@
     "price": 1.25,
     "unit": "each",
     "inventory": 63,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "avocado.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Bananas",
     "variety": "",
@@ -657,10 +711,11 @@
     "price": 0.57,
     "unit": "per pound",
     "inventory": 64,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "banana.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Bananas",
     "variety": "",
@@ -669,7 +724,8 @@
     "price": 0.8,
     "unit": "per pound",
     "inventory": 65,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "banana.jpg"
   },
   {
     "Category1": "Berries",
@@ -681,7 +737,8 @@
     "price": 2.45,
     "unit": "5.6 - 6 oz package",
     "inventory": 66,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blackberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -693,7 +750,8 @@
     "price": 3.24,
     "unit": "5.6 - 6 oz package",
     "inventory": 67,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blackberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -705,7 +763,8 @@
     "price": 2.86,
     "unit": "1 pint package",
     "inventory": 68,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blueberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -717,7 +776,8 @@
     "price": 4.43,
     "unit": "18 oz package",
     "inventory": 69,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blueberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -729,7 +789,8 @@
     "price": 2.53,
     "unit": "6 oz package",
     "inventory": 70,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blueberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -741,7 +802,8 @@
     "price": 2.88,
     "unit": "1 pint package",
     "inventory": 71,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blueberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -753,7 +815,8 @@
     "price": 3.02,
     "unit": "6 oz package",
     "inventory": 72,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "blueberry.jpg"
   },
   {
     "Category1": "",
@@ -765,7 +828,8 @@
     "price": 1.9,
     "unit": "each",
     "inventory": 73,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "cantaloupe.png"
   },
   {
     "Category1": "",
@@ -777,7 +841,8 @@
     "price": 0.51,
     "unit": "per pound",
     "inventory": 74,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "cantaloupe.png"
   },
   {
     "Category1": "",
@@ -789,7 +854,8 @@
     "price": 1.88,
     "unit": "each",
     "inventory": 75,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "cantaloupe.png"
   },
   {
     "Category1": "",
@@ -801,10 +867,11 @@
     "price": 3.99,
     "unit": "per pound",
     "inventory": 76,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "cherry.jpeg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Clementines",
     "variety": "",
@@ -813,10 +880,11 @@
     "price": 3.08,
     "unit": "2 lb bag",
     "inventory": 77,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "clementine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Clementines",
     "variety": "",
@@ -825,10 +893,11 @@
     "price": 4.55,
     "unit": "3 lb bag",
     "inventory": 78,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "clementine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Clementines",
     "variety": "",
@@ -837,7 +906,8 @@
     "price": 5.58,
     "unit": "5 lb package",
     "inventory": 79,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "clementine.jpg"
   },
   {
     "Category1": "Citrus",
@@ -849,7 +919,8 @@
     "price": 3.73,
     "unit": "5 lb bag",
     "inventory": 80,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
     "Category1": "Citrus",
@@ -861,7 +932,8 @@
     "price": 0.99,
     "unit": "each",
     "inventory": 81,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
     "Category1": "Citrus",
@@ -873,7 +945,8 @@
     "price": 1.01,
     "unit": "per pound",
     "inventory": 82,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
     "Category1": "Citrus",
@@ -885,7 +958,8 @@
     "price": 4.98,
     "unit": "5 lb bag",
     "inventory": 83,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
     "Category1": "Citrus",
@@ -897,7 +971,8 @@
     "price": 1.41,
     "unit": "each",
     "inventory": 84,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
     "Category1": "Citrus",
@@ -909,10 +984,11 @@
     "price": 1.38,
     "unit": "per pound",
     "inventory": 85,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "red-grapefruit.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "Black Seedless",
@@ -921,10 +997,11 @@
     "price": 2.31,
     "unit": "per pound",
     "inventory": 86,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-black.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "Black Seedless",
@@ -933,10 +1010,11 @@
     "price": 1.99,
     "unit": "per pound",
     "inventory": 87,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-black.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "Red Globe",
@@ -945,10 +1023,11 @@
     "price": 1.93,
     "unit": "per pound",
     "inventory": 88,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-red.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "Red Seedless",
@@ -957,10 +1036,11 @@
     "price": 2.02,
     "unit": "per pound",
     "inventory": 89,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-red.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "Red Seedless",
@@ -969,10 +1049,11 @@
     "price": 1.9,
     "unit": "per pound",
     "inventory": 90,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-red.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "White Seedless",
@@ -981,10 +1062,11 @@
     "price": 2.16,
     "unit": "per pound",
     "inventory": 91,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-white.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Grapes",
     "variety": "White Seedless",
@@ -993,10 +1075,11 @@
     "price": 1.99,
     "unit": "per pound",
     "inventory": 92,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "grape-white.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Honeydews",
     "variety": "",
@@ -1005,10 +1088,11 @@
     "price": 2.85,
     "unit": "each",
     "inventory": 93,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "honeydew.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Honeydews",
     "variety": "",
@@ -1017,7 +1101,8 @@
     "price": 0.85,
     "unit": "per pound",
     "inventory": 94,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "honeydew.jpg"
   },
   {
     "Category1": "",
@@ -1029,7 +1114,8 @@
     "price": 1.41,
     "unit": "1 lb bag",
     "inventory": 95,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "kiwifruit.jpeg"
   },
   {
     "Category1": "",
@@ -1041,7 +1127,8 @@
     "price": 0.52,
     "unit": "each",
     "inventory": 96,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "kiwifruit.jpeg"
   },
   {
     "Category1": "",
@@ -1053,7 +1140,8 @@
     "price": 2.54,
     "unit": "1 lb bag",
     "inventory": 97,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "kiwifruit.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1065,7 +1153,8 @@
     "price": 3.39,
     "unit": "2 lb bag",
     "inventory": 98,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lemon.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1077,7 +1166,8 @@
     "price": 0.64,
     "unit": "each",
     "inventory": 99,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lemon.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1089,7 +1179,8 @@
     "price": 1.06,
     "unit": "per pound",
     "inventory": 100,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lemon.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1101,7 +1192,8 @@
     "price": 5.29,
     "unit": "2 lb bag",
     "inventory": 101,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lemon.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1113,7 +1205,8 @@
     "price": 0.98,
     "unit": "each",
     "inventory": 102,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lemon.jpeg"
   },
   {
     "Category1": "Citrus",
@@ -1125,7 +1218,8 @@
     "price": 0.3,
     "unit": "each",
     "inventory": 103,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lime.jpg"
   },
   {
     "Category1": "Citrus",
@@ -1137,10 +1231,11 @@
     "price": 0.79,
     "unit": "per pound",
     "inventory": 104,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "lime.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Mangoes",
     "variety": "",
@@ -1149,10 +1244,11 @@
     "price": 1.03,
     "unit": "each",
     "inventory": 105,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "mango.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Mangoes",
     "variety": "",
@@ -1161,10 +1257,11 @@
     "price": 3.49,
     "unit": "per pound",
     "inventory": 106,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "mango.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Mangoes",
     "variety": "",
@@ -1173,10 +1270,11 @@
     "price": 1.61,
     "unit": "each",
     "inventory": 107,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "mango.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Nectarines",
     "variety": "White Flesh",
@@ -1185,10 +1283,11 @@
     "price": 1.44,
     "unit": "per pound",
     "inventory": 108,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "nectarine-white.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Nectarines",
     "variety": "Yellow Flesh",
@@ -1197,10 +1296,11 @@
     "price": 2.17,
     "unit": "per pound",
     "inventory": 109,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "nectarine-yellow.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1209,10 +1309,11 @@
     "price": 3.63,
     "unit": "3 lb bag",
     "inventory": 110,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1221,10 +1322,11 @@
     "price": 3.91,
     "unit": "4 lb bag",
     "inventory": 111,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1233,10 +1335,11 @@
     "price": 6.54,
     "unit": "8 lb bag",
     "inventory": 112,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1245,10 +1348,11 @@
     "price": 0.77,
     "unit": "each",
     "inventory": 113,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1257,10 +1361,11 @@
     "price": 1.15,
     "unit": "per pound",
     "inventory": 114,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1269,10 +1374,11 @@
     "price": 4.99,
     "unit": "3 lb bag",
     "inventory": 115,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1281,10 +1387,11 @@
     "price": 4.36,
     "unit": "4 lb bag",
     "inventory": 116,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1293,10 +1400,11 @@
     "price": 0.88,
     "unit": "each",
     "inventory": 117,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Navel",
@@ -1305,10 +1413,11 @@
     "price": 1.76,
     "unit": "per pound",
     "inventory": 118,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-navel.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Valencia",
@@ -1317,10 +1426,11 @@
     "price": 4.99,
     "unit": "3 lb bag",
     "inventory": 119,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-valencia.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Valencia",
@@ -1329,10 +1439,11 @@
     "price": 4.64,
     "unit": "4 lb bag",
     "inventory": 120,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-valencia.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Valencia",
@@ -1341,10 +1452,11 @@
     "price": 3.54,
     "unit": "4 lb bag",
     "inventory": 121,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-valencia.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Oranges",
     "variety": "Valencia",
@@ -1353,10 +1465,11 @@
     "price": 0.86,
     "unit": "per pound",
     "inventory": 122,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "orange-valencia.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Papaya",
     "variety": "",
@@ -1365,10 +1478,11 @@
     "price": 0.5,
     "unit": "each",
     "inventory": 123,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "papaya.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Papaya",
     "variety": "",
@@ -1377,10 +1491,11 @@
     "price": 1,
     "unit": "per pound",
     "inventory": 124,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "papaya.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Peaches",
     "variety": "White Flesh",
@@ -1389,10 +1504,11 @@
     "price": 1.49,
     "unit": "per pound",
     "inventory": 125,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "peach-white.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Stone Fruit",
     "Category2": "",
     "species": "Peaches",
     "variety": "Yellow Flesh",
@@ -1401,7 +1517,8 @@
     "price": 2.29,
     "unit": "per pound",
     "inventory": 126,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "peach-yellow.png"
   },
   {
     "Category1": "",
@@ -1413,7 +1530,8 @@
     "price": 1.58,
     "unit": "per pound",
     "inventory": 127,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-bartlett.png"
   },
   {
     "Category1": "",
@@ -1425,7 +1543,8 @@
     "price": 1.87,
     "unit": "per pound",
     "inventory": 128,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-bartlett.png"
   },
   {
     "Category1": "",
@@ -1437,7 +1556,8 @@
     "price": 3.99,
     "unit": "3 lb bag",
     "inventory": 129,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-bosc.jpeg"
   },
   {
     "Category1": "",
@@ -1449,7 +1569,8 @@
     "price": 1.6,
     "unit": "per pound",
     "inventory": 130,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-bosc.jpeg"
   },
   {
     "Category1": "",
@@ -1461,7 +1582,8 @@
     "price": 2.04,
     "unit": "per pound",
     "inventory": 131,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-bosc.jpeg"
   },
   {
     "Category1": "",
@@ -1473,7 +1595,8 @@
     "price": 3.99,
     "unit": "3 lb bag",
     "inventory": 132,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-danjou.png"
   },
   {
     "Category1": "",
@@ -1485,7 +1608,8 @@
     "price": 1.32,
     "unit": "per pound",
     "inventory": 133,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-danjou.png"
   },
   {
     "Category1": "",
@@ -1497,10 +1621,11 @@
     "price": 2.04,
     "unit": "per pound",
     "inventory": 134,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pear-danjou.png"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Pineapples",
     "variety": "",
@@ -1509,10 +1634,11 @@
     "price": 2.46,
     "unit": "each",
     "inventory": 135,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pineapple.jpeg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Pineapples",
     "variety": "",
@@ -1521,10 +1647,11 @@
     "price": 0.65,
     "unit": "per pound",
     "inventory": 136,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pineapple.jpeg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Pineapples",
     "variety": "",
@@ -1533,10 +1660,11 @@
     "price": 3.39,
     "unit": "each",
     "inventory": 137,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pineapple.jpeg"
   },
   {
-    "Category1": "",
+    "Category1": "Tropical",
     "Category2": "",
     "species": "Pineapples",
     "variety": "",
@@ -1545,7 +1673,8 @@
     "price": 1.01,
     "unit": "per pound",
     "inventory": 138,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pineapple.jpeg"
   },
   {
     "Category1": "",
@@ -1557,7 +1686,8 @@
     "price": 2.02,
     "unit": "per pound",
     "inventory": 139,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "plum.jpeg"
   },
   {
     "Category1": "",
@@ -1569,10 +1699,11 @@
     "price": 0.99,
     "unit": "each",
     "inventory": 140,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "pomegranate.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Raspberries",
     "variety": "Red",
@@ -1581,10 +1712,11 @@
     "price": 2.91,
     "unit": "6 oz package",
     "inventory": 141,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "raspberry.png"
   },
   {
-    "Category1": "",
+    "Category1": "Berries",
     "Category2": "",
     "species": "Raspberries",
     "variety": "Red",
@@ -1593,10 +1725,11 @@
     "price": 3.74,
     "unit": "6 oz package",
     "inventory": 142,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "raspberry.png"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Satsuma",
     "variety": "",
@@ -1605,10 +1738,11 @@
     "price": 4.5,
     "unit": "3 lb bag",
     "inventory": 143,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "satsuma.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Satsuma",
     "variety": "",
@@ -1617,7 +1751,8 @@
     "price": 2.99,
     "unit": "per pound",
     "inventory": 144,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "satsuma.jpg"
   },
   {
     "Category1": "Berries",
@@ -1629,7 +1764,8 @@
     "price": 2.5,
     "unit": "1 lb package",
     "inventory": 145,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "strawberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -1641,7 +1777,8 @@
     "price": 4.03,
     "unit": "2 lb package",
     "inventory": 146,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "strawberry.jpg"
   },
   {
     "Category1": "Berries",
@@ -1653,10 +1790,11 @@
     "price": 4.54,
     "unit": "1 lb package",
     "inventory": 147,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "strawberry.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangelos",
     "variety": "",
@@ -1665,10 +1803,11 @@
     "price": 3.89,
     "unit": "3 lb bag",
     "inventory": 148,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangelo.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangelos",
     "variety": "",
@@ -1677,10 +1816,11 @@
     "price": 0.97,
     "unit": "each",
     "inventory": 149,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangelo.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangelos",
     "variety": "",
@@ -1689,10 +1829,11 @@
     "price": 1.44,
     "unit": "per pound",
     "inventory": 150,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangelo.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangelos",
     "variety": "",
@@ -1701,10 +1842,11 @@
     "price": 1.69,
     "unit": "per pound",
     "inventory": 151,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangelo.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1713,10 +1855,11 @@
     "price": 2.31,
     "unit": "2 lb bag",
     "inventory": 152,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1725,10 +1868,11 @@
     "price": 3.8,
     "unit": "3 lb bag",
     "inventory": 153,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1737,10 +1881,11 @@
     "price": 0.72,
     "unit": "each",
     "inventory": 154,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1749,10 +1894,11 @@
     "price": 1.79,
     "unit": "per pound",
     "inventory": 155,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1761,10 +1907,11 @@
     "price": 4.99,
     "unit": "3 lb bag",
     "inventory": 156,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Citrus",
     "Category2": "",
     "species": "Tangerines",
     "variety": "",
@@ -1773,10 +1920,11 @@
     "price": 2.24,
     "unit": "per pound",
     "inventory": 157,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "tangerine.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Watermelons",
     "variety": "Seedless Miniature",
@@ -1785,10 +1933,11 @@
     "price": 2.75,
     "unit": "each",
     "inventory": 158,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "watermelon.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Watermelons",
     "variety": "Seedless Miniature",
@@ -1797,10 +1946,11 @@
     "price": 1.05,
     "unit": "per pound",
     "inventory": 159,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "watermelon.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Watermelons",
     "variety": "Seedless Miniature",
@@ -1809,10 +1959,11 @@
     "price": 5.99,
     "unit": "each",
     "inventory": 160,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "watermelon.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Watermelons",
     "variety": "Seedless",
@@ -1821,10 +1972,11 @@
     "price": 4.9,
     "unit": "each",
     "inventory": 161,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "watermelon.jpg"
   },
   {
-    "Category1": "",
+    "Category1": "Melons",
     "Category2": "",
     "species": "Watermelons",
     "variety": "Seedless",
@@ -1833,6 +1985,7 @@
     "price": 0.44,
     "unit": "per pound",
     "inventory": 162,
-    "isCurrentlyAvailable": "TRUE"
+    "isCurrentlyAvailable": "TRUE",
+    "photos": "watermelon.jpg"
   }
 ]
