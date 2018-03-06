@@ -38,6 +38,7 @@ class ProductPage extends React.Component {
         const product = this.state.product;
         const photo = (product.photos) ? product.photos[0] : '';
         const price = product.price;
+        const isLoggedIn = this.props.isLoggedIn;
         return (
             <div>
                 <h1>{product.name}</h1>
@@ -50,11 +51,20 @@ class ProductPage extends React.Component {
                     <button onClick={this.handleClick}>add to cart</button>
                 </Link>
                 <Review product={product} />
-                <WriteReview product={product} updateProductReview={this.updateProductReview} />
+                { isLoggedIn &&
+                    <WriteReview
+                        product={product}
+                        updateProductReview={this.updateProductReview} /> }
             </div>
         );
     }
 }
+
+const mapState = (state) => {
+    return {
+        isLoggedIn: !!state.user.id
+    };
+};
 
 const mapDispatch = dispatch => {
     return {
@@ -64,4 +74,4 @@ const mapDispatch = dispatch => {
     };
 };
 
-export default connect(null, mapDispatch)(ProductPage);
+export default connect(mapState, mapDispatch)(ProductPage);
