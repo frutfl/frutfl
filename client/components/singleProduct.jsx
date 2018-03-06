@@ -33,6 +33,7 @@ class ProductPage extends React.Component {
     updateProductReview(review) {
         const product = this.state.product;
         product.reviews = [...product.reviews, review];
+
         this.setState({product});
     }
 
@@ -42,7 +43,7 @@ class ProductPage extends React.Component {
         const price = product.price;
         const user = this.props.user;
         const isLoggedIn = !!user.id;
-      
+
         return (
             <div>
                 {
