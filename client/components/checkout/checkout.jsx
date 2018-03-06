@@ -16,6 +16,7 @@ class Checkout extends Component {
   render() {
     return (
       <div className="checkout">
+      <h2>Total ${this.props.cart.reduce((sum, item) => sum + (item.product.price * item.quantity), 0).toFixed(2)}</h2>
         <h2>Shipping Address</h2>
         <AddressList addressList={this.props.addressList} selectAddress={this.props.selectShipping} selectedId={this.props.shippingId} />
         <NewAddress addressType="SHIPPING" />
@@ -27,6 +28,7 @@ class Checkout extends Component {
 }
 
 const mapState = state => ({
+  cart: state.cart,
   addressList: state.addresses.addressList,
   shippingId: state.addresses.shippingId,
   billingId: state.addresses.billingId,
