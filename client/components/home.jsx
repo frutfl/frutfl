@@ -25,25 +25,26 @@ class Home extends React.Component {
     }
 
     render() {
+        const regexp = new RegExp(`\\b${this.state.search}`, 'i');
         let products = ( this.props.category === 'ALL' ) ?
                        this.props.products.filter(product => {
-                           return (product.name.toLowerCase().includes(this.state.search.toLowerCase()));
+                           return regexp.test(product.name);
                        })
                      : this.props.products.filter(product => {
                              const match = product.categories.filter(category => {
                                  return category.id === this.props.category;
                              });
-                             return ( match.length && product.name.toLowerCase().includes(this.state.search.toLowerCase()));
+                             return ( match.length && regexp.test( product.name ));
                          });
         return (
             <div>
+                <Categories />
                 <form>
                     <label>
                         Search:
                         <input type="text" value={this.state.search} onChange={this.handleChange} />
                     </label>
                 </form>
-                <Categories />
                 <Products products={products} />
             </div>
         );
