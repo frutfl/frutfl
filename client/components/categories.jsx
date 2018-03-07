@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import {connect} from 'react-redux';
+import {NavLink} from 'react-router-dom';
 import { updateCategory } from '../store';
 
 class Categories extends React.Component {
@@ -25,10 +26,10 @@ class Categories extends React.Component {
     render(){
         const categories = this.state.categories;
         return (
-            <div>
-                <button onClick={(evt) => this.onClick(evt, 'ALL')}>X</button>
+            <div className="categories">
+                <NavLink to="#" onClick={(evt) => this.onClick(evt, 'ALL')}>All</NavLink>
                 {categories.map(cat => (
-                    <button key={cat.id} onClick={(evt) => this.onClick(evt, cat.id)}>{ cat.name }</button>
+                    <NavLink to="#" key={cat.id} onClick={(evt) => this.onClick(evt, cat.id)}>{ cat.name }</NavLink>
                 ))}
             </div>
         );

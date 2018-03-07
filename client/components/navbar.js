@@ -5,13 +5,12 @@ import {Link} from 'react-router-dom';
 import {logout} from '../store';
 
 const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
-  <div>
-    <h1>BOILERMAKER</h1>
+  <div className="navbar">
     <nav>
       {isLoggedIn ? (
-        <div>
+        <div className="navlinks">
           {/* The navbar will show these links after you log in */}
-          <Link to="/home">Home</Link>
+          <Link to="/home"><img src="/images/FRUTFL-logo.png" /></Link>
           <a href="#" onClick={handleClick}>
             Logout
           </a>
@@ -23,19 +22,18 @@ const Navbar = ({ handleClick, isLoggedIn, isAdmin }) => (
           <Link to="/orders">Orders</Link>
         </div>
       ) : (
-        <div>
+        <div className="navlinks">
           {/* The navbar will show these links before you log in */}
-          <Link to="/home">Home</Link>
+          <Link to="/home"><img src="/images/FRUTFL-logo.png" /></Link>
           <Link to="/login">Login</Link>
           <Link to="/signup">Sign Up</Link>
         </div>
       )}
       {/* The navbar will show these links whether or not the user is logged in */ }
-      <div>
+      <div className="cart-link">
         <Link to="/cart">Shopping Cart</Link>
       </div>
     </nav>
-    <hr />
   </div>
 );
 

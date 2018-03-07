@@ -4,7 +4,7 @@ import Product from './product.jsx';
 
 export default function Products(props) {
     return (
-        <div>
+        <div className="product-list-container">
             {
                 props.products.map(product => {
                     const key = product.id;

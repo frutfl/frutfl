@@ -27,7 +27,7 @@ const WriteReview = (props) => {
   const user = props.user;
   const updateProductReview = props.updateProductReview;
   return (
-    <div>
+    <div className="review-write">
       <h2>Write your review</h2>
       <form onSubmit={handleSubmit(product.id, user, updateProductReview)}>
         <div>

@@ -39,12 +39,7 @@ class Home extends React.Component {
         return (
             <div>
                 <Categories />
-                <form>
-                    <label>
-                        Search:
-                        <input type="text" value={this.state.search} onChange={this.handleChange} />
-                    </label>
-                </form>
+                <input className="search-box" type="text" value={this.state.search} placeholder="Search..." onChange={this.handleChange} />
                 <Products products={products} />
             </div>
         );
